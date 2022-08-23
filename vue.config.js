@@ -21,6 +21,7 @@ module.exports = defineConfig({
             'vue',
             'vuetify',
             'vue-router',
+            'single-spa',
             "rxjs",
             "rxjs/operators",
             "@Yanovis/app-utils",

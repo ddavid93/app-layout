@@ -23,7 +23,6 @@ const vueLifecycles = singleSpaVue({
         },
         computed: {
             isMobile: function () {
-                console.log(this.$vuetify.breakpoint)
                 return this.$vuetify.breakpoint.width < 769;
             },
             appPreset() {
