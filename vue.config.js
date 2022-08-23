@@ -19,6 +19,8 @@ module.exports = defineConfig({
             'vue-i18n',
             'vue-axios',
             'vue',
+            'vuetify',
+            'vue-router',
             "rxjs",
             "rxjs/operators",
             "@Yanovis/app-utils",

@@ -1,8 +1,8 @@
 <template>
-    <div class="layout v-application">
+    <div v-if="$auth.ready()" class="layout v-application">
         <CoreToolbar v-if="$auth.check()"/>
 
-<!--        <core-running-tracker-overlay v-if="$auth.check()"></core-running-tracker-overlay>-->
+        <!--        <core-running-tracker-overlay v-if="$auth.check()"></core-running-tracker-overlay>-->
 
         <div v-if="!$auth.ready()">
             <loading :active="!$auth.ready()" :is-full-page="true"></loading>
