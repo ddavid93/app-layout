@@ -1,0 +1,48 @@
+@import '~vuetify/src/styles/styles.sass';
+
+$ynv-dark: #202328;
+$ynv-light: #E7EAEE;
+$primary: #1E5AAC;
+
+$menu-navigation-delay: 0.6s;
+$menu-navigation-item-delay: 0.25s;
+
+$container-padding-x: 24px;
+$btn-border-radius: 3px;
+$btn-text-transform: capitalize;
+$card-elevation: 1;
+
+/** begin stepper **/
+$stepper-header-elevation: 0;
+$stepper-elevation: 0;
+$stepper-header-height: 82;
+$stepper-step-step-margin: 14px;
+$stepper-step-step-font-size: 16px;
+$stepper-label-small-font-weight: 500;
+$stepper-content-padding: 16px 25px;
+/** end stepper **/
+
+/* Dialogs */
+$dialog-max-height: 95%;
+
+/* Data Tables */
+$data-table-text-color: #434343;
+$data-table-lang-border: #919191;
+
+/* Data Tables */
+
+$overflow-input-slot-border-width: 0 !default;
+
+$material-light: (
+        'background': $ynv-light,
+);
+
+$material-dark: (
+        'navigation-drawer': $ynv-dark,
+);
+
+$progress-linear-stream-border-width: 2px !default;
+
+/** Communication carousel navigation drawer **/
+$carousel-dot-margin: 0;
+$carousel-dot-inactive-opacity: 0.3;

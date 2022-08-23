@@ -1,0 +1,3398 @@
+@import './variables.scss'
+@import '~vuetify/src/styles/tools/_functions.sass'
+$primary: #06429A
+
+//.v-badge
+//  &__badge
+//    border-radius: 0
+//
+//.theme--light
+//  .v-app-bar.v-toolbar.v-sheet
+//    background-color: map-deep-get($colors, 'red', 'base')
+.ynv-grey
+  background: #FBFBFD
+
+.ynv-relative
+  position: relative !important
+
+.ynv-absolute
+  position: absolute !important
+
+.ynv-full-max-width
+  max-width: 100% !important
+
+.ynv-full-width
+  width: 100% !important
+
+.ynv-full-height
+  height: 100% !important
+
+.ynv-close
+  position: absolute
+  right: 19px
+  top: 14px
+  z-index: 99
+
+header.theme--light .logo-dark
+  display: none
+
+header.theme--dark .logo-light
+  display: none
+
+.menu-open .favicon
+  display: none
+
+/* RUNNING DOTS ANIMATION/LOADING */
+.ynv-loading .ynv-running_dot
+  animation: 2s blink infinite
+
+.ynv-loading .ynv-running_dot:nth-child(2)
+  animation-delay: 500ms
+
+.ynv-loading .ynv-running_dot:nth-child(3)
+  animation-delay: 1s
+
+/* BIG DOTS CORRESPONDENCE ANIMATION/LOADING */
+$loader--width: 300px
+$loader-dot--size: 20px
+
+.container-loader
+  width: 100%
+
+.loader
+  height: $loader-dot--size
+  width: $loader--width
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+
+  &--dot
+    animation:
+      name: loader
+      timing-function: ease-in-out
+      duration: 3s
+      iteration-count: infinite
+    height: $loader-dot--size
+    width: $loader-dot--size
+    border-radius: 100%
+    background-color: black
+    position: absolute
+    border: 0 solid white
+
+    &:first-child
+      background-color: #235DAE
+      animation-delay: 0.6s
+
+    &:nth-child(2)
+      background-color: #5C3394
+      animation-delay: 0.4s
+
+    &:nth-child(3)
+      background-color: #118F9A
+      animation-delay: 0.3s
+
+    &:nth-child(4)
+      background-color: #69A94F
+      animation-delay: 0.2s
+
+    &:nth-child(5)
+      background-color: #E58B06
+      animation-delay: 0.1s
+
+    &:nth-child(6)
+      background-color: #BA4101
+      animation-delay: 0s
+
+
+@keyframes loader
+  15%
+    transform: translateX(0)
+
+  45%
+    transform: translateX($loader--width - $loader-dot--size)
+
+  65%
+    transform: translateX($loader--width - $loader-dot--size)
+
+  95%
+    transform: translateX(0)
+
+@keyframes blink
+  50%
+    color: transparent
+
+/* RUNNING DOTS ANIMATION/LOADING */
+
+
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity $menu-navigation-delay
+//
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+
+.vld-icon
+  width: 70px
+  height: 70px
+
+.ynv-underlined
+  text-decoration: underline
+
+.ynv-pointer
+  cursor: pointer
+
+.ynv-progress
+  cursor: progress !important
+
+.ynv-grab
+  cursor: url(https://ssl.gstatic.com/ui/v1/icons/mail/images/2/openhand.cur), grab !important
+
+/** v-card **/
+.v-card .v-card__title
+  font-weight: 400
+/** v-card **/
+
+/** Box-Shadow **/
+.ynv-elevation
+  box-shadow: 0px 2px 6px #0000002E
+
+.ynv-elevation-2
+  box-shadow: 0px 1px 6px #00000029
+/** End Box-Shadow **/
+
+
+
+/** OK 2.0 Tabs **/
+
+.active_tab_color
+  background: #efeff1
+
+.tab_wrapper
+  display: flex
+  border: 1px solid #EDEDED
+  border-radius: 3px
+
+.ynv-app .theme--light.ynv-card-tab > .v-tabs-bar
+  padding: 0 48px 0 68px
+  margin-top: -21px
+  background: #f5f5f5
+
+@media only screen and (max-width: 959px)
+  .ynv-app .theme--light.ynv-card-tab > .v-tabs-bar
+    padding: 10px 6px 0 !important
+    height: 32px
+    margin-top: 0 !important
+
+
+@media only screen and (max-width: 756px)
+  .ynv-app .theme--light.ynv-card-tab > .v-tabs-bar
+    padding: 0 16px
+  .ynv-app .ynv-card-tab > .v-tabs-bar .v-tab
+    margin-right: 20px !important
+
+
+.v-slide-group.v-item-group > .v-slide-group__prev
+  justify-content: start
+
+
+.v-slide-group.v-item-group > .v-slide-group__next
+  justify-content: flex-end
+
+
+.ynv-app .ynv-card-tab > .v-tabs-bar .v-tab
+  padding: 6px 0
+  text-transform: none
+  font-weight: 400
+  margin-right: 100px
+  font-size: 16px
+
+.ynv-app .ynv-card-tab > .v-tabs-bar .v-tabs-slider
+  height: 1px
+
+
+/** END Tabs **/
+
+/* begin Toolbas*/
+.ynv-card .v-toolbar__content
+  padding-left: 0 !important
+/* end Toolbas*/
+
+
+ /** OK 2.0 Panels **/
+
+.ynv-app .ynv-card-panel
+  -webkit-box-shadow: none
+  box-shadow: none
+  width: auto
+  border: none
+
+
+.ynv-app .ynv-card-panel .v-expansion-panel
+  border-bottom: 7px solid #f5f5f5
+
+.ynv-app .ynv-card-panel .v-expansion-panel::after
+  border-top: 0
+
+.ynv-app .ynv-card-panel .v-expansion-panel::before
+  -webkit-box-shadow: none
+  box-shadow: none
+  border: none
+
+
+.ynv-app .ynv-card-panel .v-expansion-panel-header
+  padding: 25px 48px
+  cursor: default
+
+.ynv-app .ynv-card-panel .v-expansion-panel-header .subtitle
+  color: #434343 !important
+
+.ynv-app .ynv-card-panel .v-expansion-panel-header--active
+  padding: 55px 48px 25px 48px !important
+  margin-bottom: 15px
+
+.ynv-app .ynv-card-panel .v-expansion-panel-content__wrap
+  padding: 0 48px 66px 68px
+
+.ynv-card-edit .v-expansion-panel-header__icon
+  position: absolute
+  height: 18px
+  width: 18px
+  left: 71px
+  top: 28px
+
+.ynv-card-edit .v-expansion-panel-header__icon button
+  height: 18px
+  width: 18px
+
+.ynv-card-edit .v-expansion-panel-header--active .v-expansion-panel-header__icon
+  top: 58px
+
+@media only screen and (max-width: 759px)
+  .ynv-card-edit .v-expansion-panel-header .v-expansion-panel-header__icon
+    left: 22px
+    top: 28px
+
+  .ynv-card-edit .v-expansion-panel-header--active .v-expansion-panel-header__icon
+    top: 49px
+
+  .ynv-app .ynv-card-panel .v-expansion-panel-header--active
+    padding-left: 20px !important
+
+
+.ynv-app .ynv-card-panel .v-expansion-panel-content .container:first-child
+  padding-top: 0 !important
+
+
+.ynv-app .ynv-card-panel.theme--light.v-expansion-panels .v-expansion-panel--disabled
+  color: inherit
+
+
+@media only screen and (max-width: 959px)
+  .ynv-app .ynv-card-panel
+    margin: 0 0
+
+
+  .ynv-app .ynv-card-panel .v-expansion-panel-content__wrap
+    padding: 0 18px 66px 18px
+
+
+  .ynv-app .ynv-card-panel .v-expansion-panel-header
+    padding: 24px 36px 24px 15px
+
+
+/** END Panels **/
+
+
+/** begin dialog **/
+
+
+
+
+.ynv-card-dialog .v-card__title
+  font-size: 24px !important
+
+
+.ynv-card-dialog .v-card__title .btn-close
+  position: absolute
+  right: 19px
+  top: 14px
+
+.ynv-card-dialog.v-card__title .v-icon
+  font-size: 30px
+
+.ynv-card-dialog .v-card__actions .v-btn
+  min-width: 150px
+
+@media only screen and (max-width: 959px)
+  .ynv-card-dialog .v-card__actions .v-btn
+    min-width: 0px !important
+
+.ynv-confirm .ynv-card-dialog .v-card__actions .v-btn
+  min-width: 0px !important
+
+
+.ynv-card-dialog .v-card__actions > *:last-child
+  margin-left: 20px !important
+
+/** end dialog **/
+
+/** begin INPUT  **/
+.filter-applied .v-icon
+  color: var(--v-success-base) !important
+
+
+.theme--light.v-text-field > .v-input__control > .v-input__slot:before
+  border-color: #e1e1e1
+
+.v-input--checkbox .v-icon
+  color: #1E5AAC
+
+/** end INPUT  **/
+
+
+
+ /** begin Buttons **/
+.v-btn
+  text-transform: none !important
+
+.v-btn::first-letter
+  text-transform: capitalize !important
+
+
+.v-text-field > .v-input__control > .v-input__slot:after,
+.theme--light.v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before,
+.theme--light.v-btn-toggle:not(.v-btn-toggle--group) .v-btn.v-btn
+  border-color: #eeeeee !important
+
+.theme--light.v-btn:not(.v-btn--icon):not(.v-btn--text):not(.v-btn--outlined)
+  background-color: #ededed
+
+.ynv-btn-item .v-btn
+  border-top-right-radius: 0
+  border-bottom-right-radius: 0
+  border: 1px solid #EDEDED
+  border-right: 0px
+
+.ynv-btn-item + .ynv-btn-item .v-btn
+  //border-top-left-radius: 0
+  //border-bottom-left-radius: 0
+  //border-top-right-radius: 3px
+  //border-bottom-right-radius: 3px
+  border-radius: 0
+  border-left: 0px
+  border-left: 1px solid #EDEDED
+
+.ynv-btn-item:last-child .v-btn
+  border-top-left-radius: 0
+  border-bottom-left-radius: 0
+  border-top-right-radius: 3px
+  border-bottom-right-radius: 3px
+  border-right: 1px solid
+  border-left: 1px solid #EDEDED
+
+
+.ynv-btn-lang-select
+  border: 1px solid #EDEDED
+
+.ynv-btn-lang-select.v-item--active
+  background-color: #eeeeee !important
+  color: #434343 !important
+
+.ynv-btn-lang-select.v-item--active::before
+  opacity: 0 !important
+  background-color: transparent !important
+
+.v-btn:not(.v-btn--round).v-size--large
+  height: 38px
+  min-width: 148px
+  padding: 10px 48px
+
+.v-btn.yvn-btn-lang
+  min-width: 27px !important
+  height: 27px !important
+  font-size: 14px !important
+  font-weight: normal !important
+
+
+.v-btn.yvn-btn-lang.active
+  border: 1px solid $data-table-lang-border !important
+  color: $data-table-text-color !important
+
+.ynv-btn-action
+  min-width: 180px !important
+
+.v-btn.ynv-btn-action-mobile
+  position: fixed
+  bottom: 16px
+  right: 16px
+  z-index: 9
+
+
+.v-speed-dial.v-speed-dial-action-mobile .v-speed-dial-action-mobile-child-wrapper
+  width: 100vw
+  position: absolute
+  bottom: 0
+  right: 0
+
+.v-speed-dial.v-speed-dial-action-mobile .v-speed-dial-action-mobile-child-wrapper .v-speed-dial-action-mobile-child .text-wrapper
+  background: #FFFFFF
+  color: #777777
+  font-weight: 600
+  border-radius: 10px
+  border: 0 solid #0B0E12
+
+.v-speed-dial.v-speed-dial-action-mobile,
+.v-btn.ynv-btn-action-mobile
+  position: fixed
+  bottom: 16px
+  right: 16px
+  z-index: 9
+
+/** end Buttons **/
+
+/** begin stepper **/
+.ynv-card .ynv-stepper
+  margin-top: -20px
+/* reducing the distance for CoreCardEdit */
+
+.ynv-stepper .v-stepper__header
+  background: #f5f5f5
+  padding: 0 48px
+
+.theme--light .v-stepper .v-stepper__header .ynv-divider
+  width: 33px
+  margin: 40px 15px
+  height: 1px
+  background: repeating-linear-gradient(to right, #BCBCBC 0, #BCBCBC 8px, transparent 4px, transparent 12px)
+
+.theme--light.v-stepper .v-stepper__step--active .v-stepper__label
+  color: $primary
+
+.ynv-stepper .v-stepper__step__step
+  min-height: 32px
+  min-width: 32px
+
+.ynv-stepper .v-stepper__content .v-btn
+  margin-left: 16px
+
+@media only screen and (max-width: 767px)
+  .ynv-stepper .v-stepper__header
+    padding: 0 20px
+  .theme--light .v-stepper .v-stepper__header .ynv-divider
+    margin: 40px 0px
+/** end stepper **/
+
+
+/* begin v-card*/
+.ynv-card .search-field
+  min-width: auto
+/* end v-card*/
+/** OK 2.0 basic styles **/
+.ynv-container
+  padding: 34px 34px
+
+@media only screen and (max-width: 767px)
+  .v-dialog .v-input__icon--append .v-icon
+    font-size: 20px !important
+
+/** end basic styles **/
+
+.rotating-icon
+  -webkit-animation: spin 2s linear infinite
+  -moz-animation: spin 2s linear infinite
+  animation: spin 2s linear infinite
+
+@-moz-keyframes spin
+  100%
+    -moz-transform: rotate(360deg)
+
+@-webkit-keyframes spin
+  100%
+    -webkit-transform: rotate(360deg)
+
+@keyframes spin
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+/** OK 2.0 begin navigation drawer **/
+.ynv-app .v-navigation-drawer
+  transition: $menu-navigation-delay cubic-bezier(0.6, 0.04, 0.19, 0.99)
+
+.ynv-app .v-navigation-drawer .v-list-group .item__title,
+.ynv-app .v-navigation-drawer .v-list-group a,
+.ynv-app .v-navigation-drawer .v-list-item__title
+  opacity: 1 !important
+  transition: opacity $menu-navigation-item-delay cubic-bezier(0.62, -0.01, 0.25, 0.98)
+  -moz-transition: opacity $menu-navigation-item-delay cubic-bezier(0.62, -0.01, 0.25, 0.98)
+  -webkit-transition: opacity $menu-navigation-item-delay cubic-bezier(0.62, -0.01, 0.25, 0.98)
+  height: auto !important
+  position: relative !important
+
+.ynv-app .v-navigation-drawer--mini-variant .v-list-group .item__title,
+.ynv-app .v-navigation-drawer--mini-variant .v-list-group a,
+.ynv-app .v-navigation-drawer--mini-variant .v-list-item__title
+  opacity: 0 !important
+  width: auto !important
+  overflow: hidden !important
+  clip: auto !important
+
+.ynv-app .v-navigation-drawer .theme--dark.v-list-item
+  height: 53px
+  margin: 7px 0
+  justify-content: start
+  padding-left: 25px
+// justify-content: start padding-left: 35px because the width of the mini-variant is specified and there is a bag  with the alignment
+
+.ynv-app .v-navigation-drawer .theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
+  color: rgba(255, 255, 255, .45) !important
+
+.ynv-app .v-list-item--active::before
+  background-color: #1C2436
+  opacity: 0.13 !important
+
+.ynv-app .v-navigation-drawer .theme--dark.v-icon
+  color: inherit
+
+.v-application--is-ltr .v-list-item__action:first-child, .v-application--is-ltr .v-list-item__icon:first-child
+  margin-right: 20px
+
+/** end navigation drawer **/
+
+/** Communication navigation drawer **/
+.info-carousel
+  height: fit-content !important
+  padding: 0 30px 30px
+
+.info-carousel .v-carousel__controls
+  display: flex
+  justify-content: start
+
+.info-carousel .v-carousel__controls .v-item-group button
+  margin: 18px 1px 0 0 !important
+  color: #ffffff1a !important
+
+.info-carousel .v-carousel__controls .v-item-group button .v-btn__content .v-icon--svg
+  font-size: 10px !important
+  height: 10px !important
+  width: 10px !important
+
+.info-carousel .v-carousel__controls .v-item-group button
+  font-size: 10px !important
+  height: 10px !important
+  width: 10px !important
+
+.info-carousel .theme--dark.v-btn--active:hover::before, .theme--dark.v-btn--active::before
+  opacity: 0
+
+.info-carousel .theme--dark.v-btn--active, .theme--dark.v-btn--active
+  background: transparent
+  border: none
+
+.v-carousel__controls__item .v-icon
+  opacity: 1
+
+info-carousel .theme--dark.v-btn--active, .theme--dark.v-btn--active svg
+  color: #ffffff
+
+.v-application--is-ltr .v-window__prev
+  left: -44px
+
+.v-application--is-ltr .v-window__next
+  right: -44px
+
+.v-window__prev, .v-window__next
+  z-index: 25
+
+/** End  **/
+
+/** begin menu **/
+.ynv-menu
+  overflow: visible
+  contain: layout
+
+.ynv-arrow-b:after
+  position: absolute
+  content: " "
+  border-bottom: 20px solid transparent
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  border-radius: 2px
+  left: 7.5%
+  margin-left: 24px
+  margin-top: 112px
+  transform: rotate(45deg)
+  z-index: -3
+  background: inherit
+
+.ynv-arrow-t-user:before, .ynv-arrow-t-user:after
+  left: 87%
+
+@media only screen and (max-width: 769px)
+  .ynv-arrow-t:before, .ynv-arrow-t:after
+    left: 26%
+
+  .ynv-arrow-t-user:before, .ynv-arrow-t-user:after
+    left: 85%
+
+
+.ynv-arrow-t:before, .ynv-arrow-t-user:before
+  top: -14px
+
+.ynv-arrow-t:after, .ynv-arrow-t-user:after
+  border-bottom: 14px solid #fff
+  top: -11px
+
+/** end menu **/
+
+@media only screen and (max-width: 767px)
+  .v-input__icon--append .v-icon
+    font-size: 30px
+
+  .v-input__icon--prepend-inner .v-icon
+    font-size: 30px
+
+/* Data Tables */
+.v-data-table,
+.v-data-table th,
+.v-data-table td
+  color: #6E6D6E !important
+
+.v-data-table th
+  font-size: 16px !important
+
+.v-data-table .v-avatar
+  margin: 5px 0
+
+.v-data-table .v-data-footer
+  height: 60px
+  padding-top: 3px
+  padding-left: 0
+
+.v-data-table .v-data-footer
+  justify-content: left
+
+.v-data-table .v-data-footer .v-data-footer__pagination
+  position: absolute
+  right: 85px
+
+.v-data-table .v-data-footer__icons-after
+  position: absolute
+  right: 30px
+
+.v-data-table .v-data-footer__icons-before
+  position: absolute
+  right: 70px
+
+.v-application--is-ltr .v-data-footer__select
+  margin-left: 0
+
+.table-row > .v-data-table__wrapper > table > tbody > tr:hover > td > div >  div >.action-on-hover
+  visibility: visible!important
+
+.table-row > .v-data-table__wrapper > table > tbody > tr > td > div >  div >.action-on-hover
+  visibility: hidden!important
+
+.table-row > .v-data-table__wrapper > table > tbody > tr:hover > td >  div >div > .action-no-hover
+  visibility: hidden!important
+
+.table-row > .v-data-table__wrapper > table > tbody > tr > td > div >  div >.action-no-hover
+  visibility: visible!important
+
+@media only screen and (max-width: 767px)
+  .v-data-table .v-data-footer__icons-after
+    right: 10px
+
+  .v-data-table .v-data-footer__icons-before
+    right: 50px
+
+.theme--light.v-label
+  color: #919191 !important
+
+.msg-count .v-badge__badge
+  min-width: 13px !important
+  font-size: 10px !important
+  height: 13px !important
+  padding: 2px 4px !important
+
+.app-menu .app-icon
+  border-radius: 6px
+  max-height: 50px
+  max-width: 50px
+  color: #fff
+  margin: 0 auto
+  box-shadow: 0 1px 6px #00000029
+
+.app-menu .app-icon .v-icon,
+.app-menu .app-icon .svg
+  font-size: 26px
+  margin: 12px 0 8px 0
+
+.app-menu .app-item a
+  padding: 0
+  text-decoration: none
+  color: inherit
+
+.app-menu .app-icon:after
+  content: ""
+  display: block
+  height: 6px
+  border-radius: 0 0 5px 5px
+
+.app-menu .app-title
+  font-size: 14px
+  font-weight: 400
+  padding: 5px 0
+  margin-top: 4px
+
+.ynv-container
+  border-top-left-radius: 25px
+  z-index: 1
+
+.core-drawer--v-list
+  background: #25292E
+
+.core-drawer--logo
+  width: 38px
+  position: absolute
+  top: 20px
+  left: 28px
+
+.core-drawer--negative-logo
+  //position: absolute
+  height: 45px
+  width: 82px
+  padding: 0
+//bottom: 38px
+//left: 20px
+
+.v-list-item-action--user-action
+  font-size: 16px
+  color: white
+
+.v-list-item-action--user-action div
+  padding: 10px
+
+//.ynv-divider
+//  padding-top: 20px
+//  padding-bottom: 20px
+
+.core-drawer
+  background: transparent linear-gradient(120deg, #12151A 0%, #0B0E12 100%) 0 0 no-repeat padding-box !important
+
+.v-list--toolbar-header
+  height: 88px
+  padding-top: 30px
+
+.v-list--toolbar-header .v-list-item__title
+  font-weight: bold
+  font-size: 22px
+
+.v-application--wrap
+  background: #FFFFFF !important
+
+.v-sheet.v-card:not(.v-sheet--outlined)
+  webkit-box-shadow: none
+  box-shadow: none
+
+.v-list-item-title--contact-info
+  text-align: left
+  font: normal normal 400 12px/16px Lato
+  letter-spacing: 0
+  color: #6B6C6F
+  opacity: 1
+  margin-left: 25.63px
+  margin-right: 31px
+
+.core-drawer--logo
+  width: 82px
+  height: 45px
+  opacity: 1
+
+.v-menu
+  z-index: 115 !important
+
+.v-list-item-action--core-notifications
+  position: absolute
+  left: 5px
+  bottom: -60px
+
+.v-card--user-info
+  //width: inherit
+  transform-origin: center center
+  max-width: 290px
+  position: fixed
+  top: 790px
+  left: 325px
+  width: 379px
+  height: 228px
+  opacity: 1
+
+.notifications-btn
+  background: none !important
+  padding: 20px
+
+.notifications-btn.v-btn--icon.v-size--large
+  height: 44px
+  width: 160px
+
+.notifications-btn .v-btn--notification-text
+  padding-left: 22px
+
+.ynv-app .user-info--b .v-btn:not(.v-btn--round).v-size--large
+  height: 38px
+  min-width: 148px
+  /* margin: 20px; */
+  padding: 10px 10px
+
+.v-list--user-info--b
+  top: 790px !important
+  left: 325px !important
+  width: 366px
+  height: 228px
+  background: #FFFFFF 0 0 no-repeat padding-box
+  box-shadow: 0 1px 6px #0000001C
+  border-radius: 4px
+  opacity: 1
+
+.v-menu--notifications
+  top: auto !important
+  bottom: calc(100% - 79vh) !important
+  min-width: 410px !important
+  left: 330px !important
+  transform-origin: left top !important
+  z-index: 102 !important
+  height: fit-content !important
+  position: fixed !important
+  background: #FFFFFF 0 0 no-repeat padding-box
+  box-shadow: 0 1px 6px #0000001C
+  opacity: 1
+  border-radius: 7px !important
+
+.v-menu--notifications .v-list-item .item
+  width: 205px
+  //height: 76px
+  background: #FFFFFF 0 0 no-repeat padding-box
+  //border-radius: 4px 4px 0 0
+  opacity: 1
+  outline-color: #F2F2F2
+
+.v-menu--notifications .v-list-item .item.active
+  background: rgba(247, 247, 248, 1) 0 0 no-repeat padding-box
+  border-radius: 7px 7px 0 0
+
+.v-menu--notifications .v-list-item .item.active .v-icon
+  color: rgba(6, 66, 154, 0.23)
+
+.v-menu--notifications .v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined)
+  background-color: inherit
+
+.v-menu--notifications .v-btn:not(.v-btn--icon)
+  -webkit-box-shadow: none
+  box-shadow: none
+
+.v-menu--notifications .v-btn:not(.v-btn--round).v-size--small
+  height: 47px
+  min-width: 50px
+  padding: 0 12.4444444444px
+
+.v-menu--notifications .div--show-all
+  text-align: left
+  font: normal normal 400 16px/40px Lato
+  letter-spacing: 0
+  color: #06429A
+
+.v-menu--notifications .v-list-item .v-menu--notifications-all
+  width: 100%
+  margin: 0 auto
+  text-align: center
+
+.v-dialog--notifications
+  width: 493px !important
+  height: 629px !important
+  background: #FFFFFF 0 0 no-repeat padding-box
+  box-shadow: 0 1px 6px #0000001C
+  border-radius: 12px 5px 5px 12px
+  opacity: 1
+  text-align: left
+  font: normal normal 400 14px/18px Lato
+  letter-spacing: 0
+
+.v-dialog--notifications .v-list.d-flex
+  background: #FFFFFF 0 0 no-repeat padding-box !important
+
+.v-dialog--notifications-title
+  padding: 25px 0 0 35px
+
+.v-dialog--notifications .v-list-item--notifications-time
+  color: #6B6C6F
+
+.v-dialog--notifications .v-list-item--notifications-text
+  color: #6B6C6F
+
+.v-menu--notifications .v-list.d-flex, .ynv-app-bar
+  background: #FFFFFF !important
+
+.core-toolbar--menu
+  height: 48px !important
+  width: 48px !important
+  position: absolute
+  top: -15px
+  left: 0
+
+.app-icon--button
+  min-width: 50px
+  min-height: 50px
+  border-radius: 7px
+  opacity: 1
+  left: -20px
+  position: relative
+  pointer-events: none
+
+.ynv-app .user-info--b .user-info--b--div .v-list-item
+  margin: 0 !important
+  min-height: 65px !important
+  padding: 20px
+
+.ynv-core-drawer-header
+  background: transparent linear-gradient(375deg, #1E2024 0%, #23262C 100%) 0 0 no-repeat padding-box !important
+  opacity: 1
+
+.ynv-core-drawer-toolbar
+  background: transparent linear-gradient(168deg, #23262C 0%, #323741 100%) 0 0 no-repeat padding-box !important
+  opacity: 1
+
+.app-icon--button
+  background: transparent linear-gradient(222deg, #414F6C 0%, #21304F 100%) 0 0 no-repeat padding-box
+
+.ynv-app-bar
+  height: 20px
+
+.v-list.d-flex
+  border-right-style: none
+
+.core-toolbar--app-bar, .v-toolbar__content
+  z-index: 0
+  height: 25px
+
+.ynv-core-drawer-header
+  height: 90.5px !important
+  padding: 20px 31px 20px 25px
+
+.ynv-core-drawer-header .app-icon-menu--button
+  width: 23px
+  height: 23px
+  opacity: 0.48
+  position: fixed
+  right: 7%
+
+.ynv-app .ynv-card-header
+  background: inherit
+
+.ynv-app .ynv-card-panel .v-expansion-panel
+  border-bottom: none
+
+.ynv-app .core-drawer .v-list .v-list-item
+  color: #9A9FA8 !important
+
+.ynv-app .core-drawer .v-list .v-list-item--active
+  background: rgba(222, 222, 222, 0.12) 0 0 no-repeat padding-box !important
+  color: #FFFFFF !important
+  margin-left: 15px
+  margin-right: 18px
+  padding-left: 0
+
+.notification--v-list-item-action
+  padding: 0 8px 0 12px
+
+.ynv-arrow-r:before, .ynv-arrow-r:after, .ynv-arrow-r-user:before, .ynv-arrow-r-user:after
+  position: absolute
+  content: " "
+  width: 0
+  height: 0
+  border-top: 15px solid transparent
+  border-right: 15px solid #FFFFFF
+  border-bottom: 15px solid transparent !important
+  left: 0
+  margin-left: -10px
+  z-index: -10
+  -webkit-filter: drop-shadow(0px 2px 6px #0000002E)
+    filter: drop-shadow(0px 2px 6px #0000002E)
+
+.ynv-arrow-r-user:before, .ynv-arrow-r-user:after
+  left: 87%
+
+@media only screen and (max-width: 769px)
+  .ynv-arrow-r:before, .ynv-arrow-r:after
+    left: 26%
+
+  .ynv-arrow-r-user:before, .ynv-arrow-r-user:after
+    left: 85%
+
+
+.ynv-arrow-r:before, .ynv-arrow-r-user:before
+  top: 5px !important
+
+.ynv-arrow-r:after, .ynv-arrow-r-user:after
+  border-bottom: 14px solid #fff
+  top: 5px !important
+
+.v-menu--menu-box
+  border-radius: 0 3px 3px 0
+
+.v-menu--menu-box-position
+  top: 25px !important
+  left: 329px !important
+
+.v-menu--menu-box-position--mobile
+  top: 93px !important
+  left: 0 !important
+
+.v-menu--menu-box-position--mobile.v-menu__content
+  max-width: 314px !important
+
+.ynv-app .v-menu--menu-box.ynv-arrow-r:before, .ynv-arrow-r-user:before
+  top: 5px !important
+
+.ynv-app .v-menu--menu-box.ynv-arrow-r:after, .ynv-arrow-r-user:after
+  top: 5px !important
+
+.ynv-app .ynv-card
+  padding: 10px
+
+.core-drawer .v-list-item__title.pl-12, .v-list-item__title.pl-8, .v-list-item__title.pl-12
+  padding-left: 36px !important
+
+.core-drawer .v-list-group .v-list-group__header .v-list-item__icon.v-list-group__header__append-icon
+  min-width: 160px !important
+  padding-right: 2px !important
+
+/* width */
+.v-dialog--notifications::-webkit-scrollbar
+  width: 7px
+  top: 70px
+
+/* Track */
+.v-dialog--notifications::-webkit-scrollbar-track
+  box-shadow: inset 0 0 5px grey
+
+/* Handle */
+.v-dialog--notifications::-webkit-scrollbar-thumb
+  background: #696969 0 0 no-repeat padding-box
+  border-radius: 0 8px 5px 0
+  opacity: 1
+
+.core-drawer--menu--slot
+  overflow-y: auto
+  height: calc(100% - 90px)
+  overflow-x: hidden
+
+.core-drawer .v-list-group .v-list-group__header[aria-expanded="true"] .v-list-item__icon.v-list-group__header__append-icon
+  padding-right: 0
+
+html
+  background: #F7F8FC !important
+
+.ynv-app .ynv-card-panel .v-expansion-panel
+  background: #FFFFFF 0 0 no-repeat padding-box !important
+  box-shadow: 0 1px 6px #0000001F !important
+  border-radius: 4px !important
+  opacity: 1 !important
+  margin: 5px 5px 10px 5px !important
+
+.ynv-app .ynv-card-panel .v-expansion-panel-content__wrap
+  padding: 0 30px 0 30px
+
+.ynv-card-edit .v-expansion-panel-header__icon
+  left: 35px !important
+
+.ynv-app .ynv-card-panel .v-expansion-panel-header
+  padding: 24px 0 25px 10px !important
+  border-bottom: 1px solid #D4D9DE
+
+.ynv-app .ynv-card-panel .v-expansion-panel-header--active
+  padding: 24px 0 25px 10px !important
+
+.ynv-card-edit .v-expansion-panel-header--active .v-expansion-panel-header__icon
+  top: 28px !important
+
+.v-text-field > .v-input__control > .v-input__slot:after, .theme--light.v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before, .theme--light.v-btn-toggle:not(.v-btn-toggle--group) .v-btn.v-btn
+  border: 1px solid white !important
+
+.app-menu--selected .selected-content
+  padding: 13px 23px 35px 28px
+
+.app-menu--selected
+  background: linear-gradient(103deg, #17243E 0%, #2B3D62 100%) 0 0 no-repeat padding-box !important
+  opacity: 1
+  display: flex
+  align-items: center
+  text-align: center
+  font: normal normal 400 14px/17px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  width: 50%
+  border-radius: 0 3px 3px 0
+  min-height: 319px
+
+.app-menu--selected .v-icon
+  padding: 15px
+
+.app-icon--button-zerberus
+  background: transparent linear-gradient(361deg, rgba(6, 80, 113, 1) 0%, rgba(83, 154, 206, 1) 100%) 0 0 no-repeat padding-box !important
+  //box-shadow: 0 1px 6px #00000029
+  border-radius: 14px
+
+.app-menu--selected-zerberus
+  background: transparent linear-gradient(361deg, rgba(11, 73, 100, 0.85) 0%, rgba(74, 146, 199, 0.85) 100%) 0 0 no-repeat padding-box !important
+
+.app-icon--button-newsletter
+  background: transparent linear-gradient(180deg, rgba(217, 145, 8, 1) 0%, rgba(216, 91, 28, 1) 100%) 0 0 no-repeat padding-box !important
+  //box-shadow: 0 0 6px #00000029
+  border-radius: 14px
+
+.app-menu--selected-newsletter
+  background: transparent linear-gradient(180deg, rgba(217, 137, 8, 0.75) 0%, rgba(208, 85, 23, 0.75) 100%) 0 0 no-repeat padding-box !important
+
+.app-icon--button-admin
+  background: transparent linear-gradient(180deg, rgba(59, 59, 59, 1) 0%, rgba(0, 0, 0, 1) 100%) 0 0 no-repeat padding-box !important
+  border-radius: 14px
+  opacity: 1
+
+.app-menu--selected-admin
+  background: transparent linear-gradient(192deg, rgba(40, 43, 49, 1) 0%, rgba(20, 23, 29, 1) 100%) 0 0 no-repeat padding-box !important
+
+.app-icon--button-communication
+  background: transparent linear-gradient(361deg, rgba(178, 15, 49, 1) 0%, rgba(185, 58, 85, 1) 100%) 0 0 no-repeat padding-box !important
+  //box-shadow: 0 1px 6px #00000029
+  border-radius: 14px
+
+.app-menu--selected-communication
+  background: transparent linear-gradient(180deg, rgba(230, 86, 113, .8) 0%, rgba(154, 30, 30, .8) 100%) 0 0 no-repeat padding-box !important
+
+.app-icon--button-activities
+  background: transparent linear-gradient(360deg, rgba(239, 93, 142, 1) 0%, rgba(244, 128, 167, 1) 100%) 0 0 no-repeat padding-box !important
+  //box-shadow: 0 1px 6px #00000029
+  border-radius: 14px
+
+.app-menu--selected-activities
+  background: transparent linear-gradient(360deg, rgba(239, 93, 142, 0.84) 0%, rgba(244, 128, 167, 0.84) 100%) 0 0 no-repeat padding-box !important
+
+.app-icon--button-support
+  background: transparent linear-gradient(180deg, rgba(172, 61, 146, 1) 0%, rgba(92, 21, 75, 1) 100%) 0 0 no-repeat padding-box !important
+  //box-shadow: 0 1px 6px #00000029
+  border-radius: 14px
+
+.app-menu--selected-support
+  background: transparent linear-gradient(180deg, rgba(172, 61, 146, 0.8) 0%, rgba(92, 21, 75, 0.8) 100%) 0 0 no-repeat padding-box !important
+
+.app-icon--button-profiling
+  background: transparent linear-gradient(180deg, rgba(88, 106, 142, 1) 0%, rgba(27, 39, 65, 1) 100%) 0 0 no-repeat padding-box !important
+  //box-shadow: 0 1px 6px #00000029
+  border-radius: 14px
+
+.app-menu--selected-profiling
+  background: transparent linear-gradient(180deg, rgba(88, 106, 142, 1) 0%, rgba(27, 39, 65, 1) 100%) 0 0 no-repeat padding-box !important
+
+.app-icon--button-pay
+  background: transparent linear-gradient(360deg, rgba(45, 83, 17, 1) 0%, rgba(83, 131, 53, 1) 100%) 0 0 no-repeat padding-box !important
+  //box-shadow: 0 1px 6px #00000029
+  border-radius: 14px
+
+.app-menu--selected-pay
+  background: transparent linear-gradient(360deg, rgba(45, 83, 17, 1) 0%, rgba(83, 131, 53, 1) 100%) 0 0 no-repeat padding-box !important
+
+.app-icon--button-datahub
+  background: transparent linear-gradient(186deg, rgba(136, 133, 227, 1) 0%, rgba(73, 53, 144, 1) 100%) 0 0 no-repeat padding-box !important
+  //box-shadow: 0 1px 6px #00000029
+  border-radius: 14px
+
+.app-menu--selected-datahub
+  background: transparent linear-gradient(184deg, rgba(136, 133, 227, 0.8) 0%, rgba(73, 53, 144, 0.8) 100%) 0 0 no-repeat padding-box !important
+
+.app-menu--selected-bcm
+  background: transparent linear-gradient(184deg, #008477 , #00423c 100%) 0 0 no-repeat padding-box !important
+.app-icon--button-bcm
+  background: transparent linear-gradient(184deg, #008477 , #00423c 100%) 0 0 no-repeat padding-box !important
+  border-radius: 14px
+
+.app-icon--button--list
+  height: 50px
+  width: 50px
+  border-radius: 7px
+
+//.app-menu--selected .selected-menu-icon
+//  padding: 20px
+//  color: #FFFFFF
+//  margin-bottom: 9px
+
+.app-menu--selected .selected-menu-title
+  text-align: left
+  font: normal normal bold 16px/16px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  opacity: 1
+
+.app-menu--selected .selected-menu-text
+  text-align: center
+  font: normal normal 400 14px/17px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  opacity: 1
+  min-width: 266px
+  min-height: 51px
+
+.app-menu-item--card
+  padding-top: 10px
+
+.app-menu--icon--hover
+  background: #F2F2F2 0 0 no-repeat padding-box !important
+  border-radius: 4px !important
+
+.app-menu
+  padding: 0 !important
+
+.app-menu .menu--list
+  text-align: left
+  font: normal normal 400 14px/13px Roboto
+  letter-spacing: 0
+  color: #9A9A9A
+  padding: 25px 48px 18px 10px
+  height: fit-content
+
+.app-menu .menu--list.menu--list--mobile
+  padding: 25px 0 18px 0 !important
+
+.app-menu .menu--list .app-title
+  font: normal normal 400 14px/13px Roboto !important
+  letter-spacing: 0
+  color: #9A9A9A
+  font-size: 14px !important
+  line-height: 1 !important
+  font-weight: 400 !important
+
+.app-menu .app-item
+  min-height: 92px !important
+  max-height: 106px !important
+
+.app-selection
+  color: #FFFFFF !important
+  background: transparent linear-gradient(120deg, #12151A 0%, #0B0E12 100%) 0 0 no-repeat padding-box !important
+  position: fixed
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  z-index: 998
+
+.app-selection .app-selection--selected
+  height: 100vh
+
+.app-selection .app-selection--selected .selected--title
+  text-align: left
+  font: normal normal bold 32px/63px Lato
+  letter-spacing: 0.3px
+  color: #FFFFFF
+  text-transform: capitalize
+  opacity: 1
+  margin-bottom: 25px
+
+.app-selection .app-selection--selected .selected--text
+  text-align: left
+  font: normal normal 400 16px/25px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  opacity: 0.64
+  margin-bottom: 55px
+
+.app-selection .selected-icon-button
+  //box-shadow: 0 1px 6px #00000029
+  opacity: 1
+  width: 71px !important
+  height: 71px !important
+  margin-bottom: 60px
+
+.app-selection .selected-icon
+  color: #FFFFFF !important
+  //box-shadow: 0 1px 6px #00000033
+  opacity: 1
+  width: 39px !important
+  height: 26px !important
+
+.app-selection .app-selection-menu--list
+  //padding: 7.3369vw 7.445652173913044vw 0 7.771739130434782vw
+  padding: 14.5vh 5.8vw 0 6.5vw !important
+
+.app-selection .app-selection-menu--title
+  text-align: left
+  font: normal normal bold 22px/37px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  text-transform: capitalize
+  opacity: 1
+
+.app-selection .app-selection-menu--item
+  background: rgb(43, 47, 52, 1) 0 0 no-repeat padding-box
+  border-radius: 15px
+  word-wrap: break-word
+  width: auto !important
+  height: 83px !important
+
+.app-selection .app-selection-menu--button
+  width: 58px !important
+  max-width: 58px !important
+  min-width: 58px !important
+  height: 58px !important
+  background: transparent linear-gradient(180deg, #586A8E 0%, #1B2741 100%) 0 0 no-repeat padding-box
+  border-radius: 14px
+  opacity: 1
+  margin: 15px
+
+.app-selection .app-selection-menu--title
+  text-align: left
+  font: normal normal bold 22px/37px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  text-transform: capitalize
+  opacity: 1
+
+.app-selection .app-selection-menu--app-title
+  text-align: left
+  font: normal normal normal 16px/15px Roboto
+  letter-spacing: 0
+  color: #9A9A9A
+  opacity: 1
+  overflow-wrap: break-word
+  word-wrap: break-word
+  -ms-word-break: break-all
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all
+  /* Instead use this non-standard one: */
+  word-break: break-word
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto
+  -moz-hyphens: auto
+  -webkit-hyphens: auto
+  hyphens: auto
+  margin-left: 4px
+  margin-right: 19px
+
+.app-selection .app-selection-menu-active .app-selection-menu--app-title
+  color: #FFFFFF !important
+
+//.app-selection .app-selection-menu--item .app-selection-menu--app-title
+
+.app-selection .app-selection-menu--icon--hover
+  background: rgba(43, 47, 52, 1) 0 0 no-repeat padding-box !important
+  border: 1px solid #707070 !important
+  opacity: 1 !important
+
+.app-selection a
+  text-decoration: none !important
+
+.app-selection .theme--light.v-list
+  background: transparent !important
+  color: white !important
+
+.app-selection .v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
+  color: inherit !important
+
+.app-selection .v-list
+  max-width: 313px
+  max-height: 50px
+
+.app-selection--v-list-item
+  bottom: 6.116207951070336vh
+  position: fixed
+  background: transparent !important
+  text-align: left
+  font: normal normal 400 14px/16px Lato
+  letter-spacing: 0
+  color: #696969 !important
+  opacity: 1
+  min-width: 245px
+  width: 245px
+  padding-left: 0 !important
+  padding-right: 16px !important
+  margin-left: 12px !important
+
+.app-selection--user-info
+  position: fixed !important
+  top: auto !important
+  bottom: calc(100% - 92.59vh)
+  left: 420px !important
+  transform-origin: left top !important
+  z-index: 8 !important
+
+.app-selection--user-info .v-btn:not(.v-btn--round).v-size--small
+  height: 47px !important
+  min-width: 35px !important
+  padding: 0 !important
+
+.ynv-card-title
+  text-align: left
+  font: normal normal 400 16px/19px Lato
+  letter-spacing: 0
+  color: #06429A
+  opacity: 1
+  font-weight: normal !important
+  font-size: 16px !important
+
+.ynv-card-sub-title
+  text-align: left
+  font: normal normal bold 26px/32px Lato
+  letter-spacing: 0
+  color: #12151A
+  opacity: 1
+  font-weight: normal !important
+  font-size: 26px !important
+  display: flex
+  align-items: center
+
+.ynv-card-sub-title-position
+  position: absolute
+  top: 0px
+  left: 12px
+
+.ynv-card-title-position
+  position: absolute
+  top: 16px
+  left: -36px
+
+.notification-date
+  text-align: left
+  font: normal normal 400 14px/18px Lato
+  letter-spacing: 0
+  color: #6B6C6F !important
+  opacity: 1
+  padding: 0 !important
+
+.notification-title
+  text-align: left
+  font: normal normal 400 14px/18px Lato
+  letter-spacing: 0
+  color: #12151A !important
+  opacity: 1
+  padding: 0 !important
+
+.app-selection .app-selection-menu-inactive .app-selection-menu--button
+  opacity: 0.1 !important
+
+.app-selection .app-selection-menu-inactive .app-selection-menu--app-title
+  opacity: 1 !important
+
+.app-selection .app-selection-menu--icon--hover .app-selection-menu--button
+  opacity: 1 !important
+
+.app-selection .app-selection-menu--icon--hover .app-selection-menu--app-title
+  opacity: 1 !important
+
+.ynv-card-alert
+  background: rgba(233, 236, 247, 1) 0 0 no-repeat padding-box !important
+  border-radius: 8px !important
+  text-align: left
+  font: normal normal bold 14px/17px Lato
+  letter-spacing: 0
+  opacity: 1
+  padding: 8px 13px 8px 10px !important
+  margin-bottom: 0 !important
+
+.ynv-card-alert .alert-title
+  color: #12151A
+
+.ynv-card-alert .alert-date
+  color: #696969
+
+.ynv-card-alert .shrink
+  padding: 20px 5px 20px 5px
+
+.ynv-card-alert .v-icon
+  left: -25px !important
+
+.ynv-card-alert .alert-close-icon
+  left: 0 !important
+
+.ynv-card-alert .row .grow.col
+  padding-left: 0 !important
+
+.ynv-card-alert .alert-link
+  text-align: left
+  text-decoration: underline
+  font: normal normal bold 14px/17px Lato
+  letter-spacing: 0
+  color: #12151A
+  opacity: 1
+
+.flex-container
+  padding: 0
+  margin: 0
+  list-style: none
+  -ms-box-orient: horizontal
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -moz-flex
+  display: -webkit-flex
+  display: flex
+
+.column-reverse
+  -webkit-flex-direction: column-reverse
+  flex-direction: column-reverse
+
+.v-dialog--notifications .item .notification-dialog-icon
+  display: inline-block
+  border-radius: 45px
+  box-shadow: 0 0 2px #888
+  padding: 8px
+  color: #D3D5D8 !important
+
+.v-dialog--notifications .item .notification-dialog-icon
+  background: rgb(237, 237, 237, 1) 0 0 no-repeat padding-box
+
+.v-dialog--notifications .item.active .notification-dialog-icon
+  background: rgba(6, 66, 154, 1) 0 0 no-repeat padding-box
+
+.v-menu--today-notifications .item .notification-dialog-icon
+  display: inline-block
+  border-radius: 45px
+  box-shadow: 0 0 2px #888
+  padding: 8px
+  color: #D3D5D8 !important
+
+.v-menu--today-notifications .item .notification-dialog-icon
+  background: rgb(237, 237, 237, 1) 0 0 no-repeat padding-box
+
+.v-menu--today-notifications .item.active .notification-dialog-icon
+  background: rgba(6, 66, 154, 1) 0 0 no-repeat padding-box
+
+.v-dialog--notifications .notification-dialog-icon-col
+  padding-left: 24px
+
+.c-notifications .v-badge__badge
+  bottom: 17px !important
+  left: 16px !important
+  background: transparent linear-gradient(180deg, #06429A 0%, #5A8CD5 100%) 0 0 no-repeat padding-box !important
+  //transparent linear-gradient(180deg, #06429A 0%, #5A8CD5 100%) 0% 0% no-repeat padding-box
+  border-color: #06429A !important
+  height: 9px
+  min-width: 9px !important
+  padding: 0 !important
+
+.v-menu--today-notifications .item
+  display: flex
+  align-items: center
+
+.v-dialog--notifications .item
+  display: flex
+  align-items: center
+
+.ynv-app .v-navigation-drawer__content .v-list .v-list-item
+  //margin-left: 13px !important
+  //margin-right: 13px !important
+  //padding: 0 2px 0 12px
+  border-radius: 3px
+  color: #FFFFFF !important
+
+.v-menu--notifications .notifications--list-item
+  padding: 0 !important
+
+.v-menu--today-notifications
+  padding: 0 !important
+
+.notifications-all--v-list
+  padding: 0 !important
+
+.core-drawer .v-list-item__title.pl-12, .v-list-item__title.pl-8, .v-list-item__title.pl-12
+  padding-left: 24px !important
+
+.app-selection--user-info .v-btn:not(.v-btn--round).v-size--small
+  height: 47px
+  min-width: 35px
+  padding: 0 12.4444444444px
+  background: transparent !important
+
+.notifications-all--v-list .v-list-item:last-child
+  border-bottom: none
+
+.notification--icon-wrapper
+  background: rgba(222, 222, 222, 0.12) 0 0 no-repeat padding-box
+  border-radius: 3px
+  width: 30px
+  height: 30px
+  align-items: center
+
+.row .ynv-card-toolbar
+  padding-bottom: 0 !important
+
+.ynv-core-drawer-header .app-icon-menu--button
+  color: #FFFFFF !important
+  caret-color: #FFFFFF !important
+
+.v-text-field > .v-input__control > .v-input__slot:after, .v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before, .theme--light.v-btn-toggle:not(.v-btn-toggle--group) .v-btn.v-btn
+  background: rgba(239, 242, 245, 1) 0 0 no-repeat padding-box
+  border: 1px solid #D4D9DE
+  border-radius: 5px
+
+.v-expansion-panel
+  background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box
+  box-shadow: 0 1px 6px #0000001F
+  border-radius: 4px
+
+.menu--list .v-list-item
+  padding-right: 0 !important
+
+.app-selection--user-info .v-list-item
+  padding: 0
+
+.app-selection--user-info .v-list-item .item.active
+  color: #12151A
+  background-color: rgb(134, 193, 112, 0.2)
+
+.ynv-core-drawer-header .app-icon-menu--button
+  min-height: 28px
+  min-width: 28px
+
+.company-details--v-list-item.v-list-item
+  height: 103.5px !important
+  padding: 31px 33.26px 24.28px 27.77px !important
+
+.core-drawer--v-list.v-list
+  padding: 0 !important
+
+.user-info--b--div .v-list-item .v-list-item-title--title
+  margin-left: 12px
+  text-align: left
+  font: normal normal 400 16px/24px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  opacity: 1
+
+.user-info--b--div .v-list-item .v-list-item-title--sub-title
+  margin-left: 12px
+  text-align: left
+  font: normal normal 400 14px/16px Lato
+  letter-spacing: 0
+  color: #696969
+  opacity: 1
+
+.app-selection-user-info .v-list-item .v-list-item-title--title
+  margin-left: 12px
+  text-align: left
+  font: normal normal 400 16px/24px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  opacity: 1
+
+.app-selection-user-info .v-list-item .v-list-item-title--sub-title
+  margin-left: 12px
+  text-align: left
+  font: normal normal 400 14px/16px Lato
+  letter-spacing: 0
+  color: #696969
+  opacity: 1
+
+.app-selection .app-selection--selected .selected--button
+  background: rgba(255, 255, 255, 0.16) !important
+  box-shadow: 0 2px 9px transparent !important
+  border-radius: 5px
+  text-align: left
+  font: normal normal 400 14px/17px Lato
+  letter-spacing: 0
+  color: rgba(255, 255, 255, 1) !important
+
+.app-selection .app-selection-contact-info
+  position: absolute !important
+  bottom: calc(100% - 92vh) !important
+  font: normal normal 900 16px/25px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  opacity: 1
+
+.app-selection .dashboard--negative-logo
+  width: 168px
+  height: 92px
+  margin-bottom: 78px
+
+.app-menu--selected-brandnamic
+  background: transparent linear-gradient(192deg, rgba(40, 43, 49, 1) 0%, rgba(20, 23, 29, 1) 100%) 0 0 no-repeat padding-box !important
+
+.v-navigation-drawer.core-notifications--v-navigation-drawer
+  min-width: 484px !important
+  max-width: 484px !important
+  left: 314px
+  background: #FFFFFF 0 0 no-repeat padding-box !important
+  box-shadow: 0 3px 6px #00000029 !important
+  border-radius: 12px 12px 0 0 !important
+  opacity: 1 !important
+  top: 20px !important
+
+.v-navigation-drawer.core-notifications--v-navigation-drawer.is-mobile
+  border-radius: 0 !important
+  left: 0 !important
+
+.core-notifications--v-navigation-drawer .headline-card
+  margin-bottom: 52px
+  margin-top: -5px
+//padding: 0 0 10px 0
+
+.core-notifications--v-navigation-drawer .headline-alert
+  height: 88px
+  width: 436px
+  background: transparent linear-gradient(258deg, #7CCCDB 0%, #3287AD 100%) 0 0 no-repeat padding-box
+  border-radius: 5px
+  padding: 0 15px 0 17px
+  text-align: left
+  letter-spacing: 0
+  color: #FFFFFF
+  opacity: 1
+
+.core-notifications--v-navigation-drawer .headline-alert .headline-alert-title
+  font: normal normal 900 16px/19px Lato
+
+.core-notifications--v-navigation-drawer .headline-alert .headline-alert-subtitle-wrapper
+  border-left: white solid 2px
+
+.core-notifications--v-navigation-drawer .headline-alert .headline-alert-subtitle
+  font: normal normal 400 14px/19px Lato
+
+.core-notifications--v-navigation-drawer .headline-header
+  height: auto
+  text-align: left
+  font: normal normal 400 20px/24px Lato
+  letter-spacing: 0
+  color: #12151A
+  opacity: 1
+  margin-bottom: 16px
+  width: 100%
+
+.button-close.v-btn.v-btn--contained:not(.primary)
+  background: rgb(212, 217, 222, 1) 0 0 no-repeat padding-box !important
+
+.button-close.v-btn
+  background: rgb(212, 217, 222, 1) 0 0 no-repeat padding-box !important
+  border-radius: 25px !important
+  height: 44px !important
+  width: 44px !important
+  padding: 0 9px !important
+  min-width: 24px !important
+
+.core-notifications--v-navigation-drawer .notification-sys-bar
+  padding: 0 0 0 20px !important
+  text-align: left
+  font: normal normal 400 20px/24px Lato
+  letter-spacing: 0
+  color: #12151A !important
+  opacity: 1
+  background: transparent !important
+  margin-bottom: 2px
+
+.core-notifications--v-navigation-drawer .notification-sys-bar .v-btn
+  height: 24px !important
+  min-width: 24px !important
+  padding: 0 8px 0 12px !important
+
+.core-notifications--v-navigation-drawer .notification-sys-bar .v-btn.txt-btn
+  padding: 0 4px 0 4px !important
+  border: 1px solid #D4D9DE !important
+  border-radius: 4px
+  opacity: 1
+
+.core-notifications--v-navigation-drawer .actions-reports
+  padding: 25px 24px 0 46px !important
+  text-align: left
+  font: normal normal 400 14px/22px Lato
+  letter-spacing: 0
+  color: #696969 !important
+  opacity: 1
+  font-size: 14px !important
+  font-weight: normal !important
+  height: 555px
+  overflow: auto
+
+.core-notifications--v-navigation-drawer .actions-reports-alert.info
+  background: transparent !important
+  text-align: left
+  font: normal normal 400 12px/15px Lato
+  letter-spacing: 0
+  color: #696969 !important
+  opacity: 1
+  padding: 0 !important
+  margin-left: 44px !important
+
+.core-notifications--v-navigation-drawer .actions-reports-buttons
+  padding: 30px 24px 30px 0
+
+.core-notifications--v-navigation-drawer .actions-reports-buttons .v-btn
+  border: none
+  background: transparent !important
+  margin-left: 25px
+
+.core-notifications--v-navigation-drawer .actions-reports-buttons .v-btn:last-child
+  background: rgba(6, 66, 154, 1) 0 0 no-repeat padding-box !important
+  box-shadow: 0 2px 9px #06429A4B !important
+  border-radius: 5px
+
+.core-notifications--v-navigation-drawer .actions-reports .v-input--selection-controls
+  margin-top: 0 !important
+  padding-top: 0 !important
+
+.core-notifications--v-navigation-drawer .actions-reports .row .col
+  padding: 3px !important
+
+.core-notifications--v-navigation-drawer .headline-card .headline-header .headline-header--title
+  padding: 0 0 0 18px
+
+.core-notifications--v-navigation-drawer .no-notification-messages.mx-3
+  margin-right: 0 !important
+  margin-left: 12px !important
+
+.v-data-table button:not(.segment-icon-btn)
+  background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box !important
+  border: 1px solid #D4D9DE !important
+  border-radius: 5px !important
+  justify-items: center !important
+  padding: 3px !important
+
+.v-data-table button:not(.segment-icon-btn) .v-icon--svg
+  color: rgba(105, 105, 105, 0.7) !important
+  caret-color: rgba(105, 105, 105, 0.7) !important
+
+.ynv-card .ynv-stepper
+  background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box !important
+  box-shadow: 0 1px 6px #0000001F !important
+  border-radius: 4px !important
+
+.ynv-card .ynv-stepper .v-stepper__header
+  background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box !important
+
+.ynv-card .ynv-stepper .v-stepper__wrapper
+  background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box !important
+
+.ynv-card .ynv-stepper .v-card__text
+  background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box !important
+
+.ynv-card .ynv-stepper .ynv-card-panel
+  background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box !important
+
+.ynv-app .theme--light.ynv-card-tab > .v-tabs-bar
+  background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box !important
+
+.ynv-app .ynv-card-panel .v-expansion-panel
+  margin: 0 5px 8px 5px !important
+
+//.ynv-stepper .v-divider
+//  border: 2px solid rgba(6, 66, 154, 1) !important
+//  background: rgba(6, 66, 154, 1) !important
+
+.c-notifications .v-navigation-drawer .v-avatar
+  border-radius: 10px !important
+  width: 38px !important
+  height: 38px !important
+  min-width: 38px !important
+
+.c-notifications .v-navigation-drawer .v-avatar.notification-dot
+  border-radius: 50% !important
+  width: 9px !important
+  height: 9px !important
+  min-width: 9px !important
+
+.c-notifications .v-navigation-drawer__content .v-list .v-list-item
+  margin-left: -24px !important
+  margin-right: -24px !important
+  border-radius: 0 !important
+  padding: 0 0 0 25px !important
+  min-height: 76px !important
+
+.c-notifications .user-info--b .user-info--b--div .v-list-item
+  margin: 0 !important
+  padding: 0 !important
+
+/* width */
+.c-notifications .v-navigation-drawer__content .notification-list--div::-webkit-scrollbar
+  width: 7px
+  top: 70px
+
+/* Track */
+.c-notifications .v-navigation-drawer__content .notification-list--div::-webkit-scrollbar-track
+  box-shadow: inset 0 0 5px grey
+
+/* Handle */
+.c-notifications .v-navigation-drawer__content .notification-list--div::-webkit-scrollbar-thumb
+  background: #8D8D8D 0 0 no-repeat padding-box
+  border-radius: 5px
+  opacity: 1
+
+.dialog-title
+  text-align: left
+  font: normal normal bold 26px/32px Lato
+  letter-spacing: 0
+  color: #12151A
+  opacity: 1
+
+.dialog-description
+  text-align: left
+  font: normal normal 400 16px/22px Lato
+  letter-spacing: 0
+  opacity: 1
+  color: #828588
+
+.edit-actions
+  position: absolute !important
+  bottom: 46% !important
+  width: 100% !important
+  z-index: 4 !important
+
+.edit-actions .v-btn
+  background: rgba(255, 255, 255, 1)
+  color: rgba(18, 21, 26, 1) !important
+
+.edit-actions .v-btn:first-child
+  margin-left: 35px !important
+
+.edit-actions .v-btn:last-child
+  margin-right: 35px !important
+
+.c-notifications .v-navigation-drawer__content .v-list .v-list-item .v-list-item__subtitle
+  text-align: left
+  font: normal normal 400 14px/18px Lato
+  letter-spacing: 0 !important
+  color: #696969 !important
+  opacity: 1
+
+.c-notifications .v-navigation-drawer__content .v-list .v-list-item .v-list-item__title
+  text-align: left
+  font: normal normal medium 14px/18px Lato !important
+  letter-spacing: 0 !important
+  color: #12151A !important
+  opacity: 1
+  font-size: 14px !important
+  font-weight: normal !important
+
+.v-dialog.v-dialog--active
+  background: white
+
+.v-application--wrap
+  background: rgba(247, 248, 252, 1) 0 0 no-repeat padding-box !important
+
+.ynv-card-panel
+  background: rgba(247, 248, 252, 1) 0 0 no-repeat padding-box !important
+
+.ynv-app .v-navigation-drawer .ynv-core-drawer-header .v-list-item__title
+  text-align: left
+  font: normal normal 600 21px/32px Titillium Web
+  letter-spacing: 0
+  color: #FFFFFF !important
+  opacity: 1 !important
+  font-weight: normal !important
+  font-size: 21px !important
+  padding-left: 2px
+
+.v-application--is-ltr .ynv-core-drawer-header .v-list-item__action:first-child, .v-application--is-ltr .ynv-core-drawer-header .v-list-item__icon:first-child
+  margin-right: 0 !important
+
+.ynv-app .v-navigation-drawer .ynv-core-drawer-header .theme--dark.v-list-item
+  padding-left: 20px !important
+
+.ynv-app .core-drawer .core-drawer--menu--slot .v-list .v-list-item .v-list-item__title
+  color: #CBCBCB !important
+
+.ynv-app .core-drawer .core-drawer--menu--slot .v-list .v-list-item
+  padding-left: 33px !important
+  padding-right: 35px !important
+  height: 43px !important
+  margin-bottom: 18px !important
+  margin-top: 6px !important
+
+.ynv-app .core-drawer .core-drawer--menu--slot .v-list .v-list-item.v-list-item--active,
+.ynv-app .core-drawer .core-drawer--menu--slot .v-list .v-list-item:hover,
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item.v-list-group__header.v-list-item--active,
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item.v-list-group__header:hover
+  margin-left: 15px !important
+  margin-right: 18px !important
+  padding-left: 18px !important
+  padding-right: 17px !important
+  color: #FFFFFF !important
+
+.v-application .core-drawer .core-drawer--menu--slot .drawer-mb
+  margin-bottom: 38px !important
+
+.v-application--is-ltr .core-drawer .core-drawer--menu--slot .v-list-item__action:first-child, .v-application--is-ltr .v-list-item__icon:first-child
+  margin-right: 14px !important
+
+.v-application .core-drawer .core-drawer--menu--slot .v-list-group .v-icon--svg
+  height: 22px !important
+  width: 22px !important
+
+.ynv-app .user-info--b .user-info--b--div .v-list-item.menu--item
+  padding: 37px 35px 33.5px 24px !important
+
+.core-drawer .core-drawer--menu--slot .v-list-group .v-list-item.v-list-group__header .v-list-item__icon.v-list-group__header__append-icon .v-icon--svg
+  height: 13px !important
+  width: 13px !important
+  color: #CBCBCB !important
+
+.core-drawer .core-drawer--menu--slot .v-list-group .v-list-item.v-list-item-active.v-list-group__header .v-list-item__icon.v-list-group__header__append-icon .v-icon--svg
+  color: #FFFFFF !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item.v-list-item--active .v-list-item__title:before
+  content: "\2013\00a0"
+  white-space: normal
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item .v-list-item__title:before
+  content: "\00a0\00a0\00a0"
+  white-space: normal
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item
+  margin-left: 15px !important
+  margin-right: 18px !important
+  padding-left: 30px !important
+  color: #CBCBCB !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item.v-list-item--active,
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item:hover,
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item.v-list-item--link:before
+  background: transparent !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item.v-list-item--active .v-list-item__title
+  color: #FFFFFF !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item
+  margin: -14.5px 0 -14.5px 0 !important
+
+.ynv-app .core-drawer .core-drawer--menu--slot .v-list .v-list-item.v-list-group__header
+  padding-left: 33px !important
+  padding-right: 35px !important
+  height: 43px !important
+  margin-top: 15px !important
+  margin-bottom: 15px !important
+
+.ynv-app .core-drawer .core-drawer--menu--slot .v-list .v-list-item.v-list-group__header.v-list-item--active
+  margin-bottom: 10px !important
+
+.company-details--v-list-item .phone-number
+  margin-bottom: 3px !important
+
+.c-notifications .menu--item .v-list-item__action.notification--v-list-item-action
+  margin: 20px 8px 20px -10px !important
+
+.ynv-app .user-info--b .user-info--b--div .v-list-item.menu--item.user--info
+  padding: 37.5px 35px 37px 24px !important
+
+.ynv-app .v-navigation-drawer .user-info--b .user-info--b--div .c-notifications .menu--item .v-list-item__title
+  text-align: left
+  font: normal normal 400 16px/19px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  opacity: 1 !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item:before,
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item:after
+  background: none !important
+  opacity: 0 !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item .v-ripple__container
+  opacity: 0 !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item:last-child
+  margin-bottom: 17.5px !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list .v-list-group .v-list-item .v-list-item__title
+  padding-left: 20px !important
+
+.ynv-app .v-navigation-drawer .core-drawer--menu--slot .v-list-item .v-list-item__action .v-icon
+  color: #CBCBCB !important
+
+.ynv-core-drawer-header .app-icon-menu--button,
+.ynv-core-drawer-header .app-icon-menu--button:before,
+.ynv-core-drawer-header .app-icon-menu--button:after
+  background: inherit !important
+  opacity: 1 !important
+  transition: none !important
+  -webkit-transition: none !important
+
+.ynv-core-drawer-header .app-icon-menu--button .v-ripple__container
+  opacity: 0 !important
+  background: none !important
+
+.ynv-menu .app-item .v-card.app-menu-item--card .app-icon .app-icon--button--list .v-icon
+  height: 24px !important
+  width: 24px !important
+
+.ynv-menu .app-item .v-card.app-menu-item--card
+  min-height: 88px !important
+  height: auto !important
+  width: 300px !important
+  margin-right: 5px
+
+.ynv-menu .app-menu .apps-active-title
+  padding-left: 27px !important
+  font: normal normal 500 12px/18px Roboto !important
+  letter-spacing: 0 !important
+  color: #9A9A9A !important
+  opacity: 1 !important
+  font-size: 12px !important
+  font-weight: 500 !important
+
+.ynv-menu .app-menu .apps-active-title.inactive-apps
+  margin-top: 35px
+
+.account-switch-button.v-btn,
+.row.user--b-content--list-item--row .v-btn
+  background: none !important
+  opacity: 1 !important
+  height: 28px !important
+  width: 28px !important
+  min-width: 28px !important
+  padding: 0 !important
+  margin-left: 7px !important
+
+.account-switch-button.v-btn .v-icon,
+.row.user--b-content--list-item--row .v-btn .v-icon
+  height: 23px !important
+  width: 23px !important
+
+.account-switch-button .v-btn .v-ripple__container:before,
+.account-switch-button .v-btn .v-ripple__container:after,
+.account-switch-button .v-btn .v-ripple__container:hover,
+.row.user--b-content--list-item--row .v-btn .v-ripple__container:before,
+.row.user--b-content--list-item--row .v-btn .v-ripple__container:after,
+.row.user--b-content--list-item--row .v-btn .v-ripple__container:hover,
+.v-data-table .v-data-table__wrapper tbody tr td button:not(.v-btn--fav):not(.v-btn--round):after
+  background-color: transparent !important
+  opacity: 0 !important
+
+.row.user--b-content--list-item--row .v-input.v-input--radio-group
+  margin-right: 21px
+
+.row.user--b-content--list-item--row .v-avatar
+  margin-right: 10px
+
+.row.user--b-content--list-item--row .col
+  padding: 5px 0 9px 0 !important
+
+.button-close.v-btn .v-icon--svg
+  height: 26px !important
+  width: 26px !important
+  fill: #12151A !important
+
+.ynv-app .ynv-card
+  padding: 0 9px 0 9px !important
+
+.ynv-app .ynv-card .row.ynv-card-toolbar
+  padding: 0 0 13px 20px !important
+
+.ynv-app .ynv-card .v-data-table .v-btn:not(.v-btn--fav):not(.v-btn--round) .v-icon--svg
+  color: rgba(105, 105, 105, 0.7) !important
+  caret-color: rgba(105, 105, 105, 0.7) !important
+
+/* Data table updates */
+.v-dialog .v-data-table button:not(.segment-icon-btn),
+.ynv-app .ynv-card .core-card--main-slot .v-data-table button:not(.segment-icon-btn)
+  background: none !important
+  border: none !important
+
+.v-dialog .v-data-table td button:not(.v-btn--fav):not(.v-btn--round),
+.ynv-app .ynv-card .core-card--main-slot .v-data-table td button:not(.v-btn--fav):not(.v-btn--round)
+  background: white 0 0 no-repeat padding-box !important
+  border: 1px solid #D4D9DE !important
+
+.ynv-app .ynv-card .core-card--main-slot .v-data-table td button:not(.v-btn--fav):not(.v-btn--round).primary
+  background: #06429A 0 0 no-repeat padding-box !important
+  border: none !important
+
+.v-dialog .v-data-table .v-data-footer__select,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-footer__select
+  margin-left: 24px !important
+
+//.v-input__append-inner .v-icon
+//  height: 13px !important
+//  width: 13px !important
+
+.v-dialog .v-data-table .v-data-footer .v-input__append-inner .v-icon,
+.v-dialog .v-data-table .v-data-footer .v-data-footer__icons-before .v-btn--icon .v-icon,
+.v-dialog .v-data-table .v-data-footer .v-data-footer__icons-after .v-btn--icon .v-icon,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-footer .v-data-footer__icons-before .v-btn .v-btn__content .v-icon,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-footer .v-data-footer__icons-after .v-btn .v-btn__content .v-icon,
+.container.ynv-container.ync-search_result .ynv-search_result_filter .v-input .v-input__control .v-input__slot .v-icon
+  height: 18px !important
+  width: 18px !important
+
+//.core-drawer--menu--slot .v-select__slot .v-input__append-inner .v-input__icon--append .v-icon,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-footer .v-data-footer__select .v-select__slot .v-input__icon,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-footer .v-data-footer__select .v-select__slot .v-input__icon .v-icon
+  margin-top: 3px !important
+  height: 13px !important
+  width: 13px !important
+
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-table__wrapper thead tr th:first-child,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-table__wrapper tbody tr td:first-child
+  padding-left: 24px !important
+
+.v-dialog .v-data-table .v-data-table__wrapper tbody tr td .v-icon.v-icon.v-icon--link,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-table__wrapper tbody tr td .v-icon.v-icon.v-icon--link
+  color: #696969 !important
+//height: 22px !important
+//width: 22px !important
+
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-table__wrapper tbody tr:nth-of-type(odd)
+  background-color: #F7F7F8
+
+.v-dialog .v-data-table,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table
+  box-shadow: 1px 1px 6px #0000001F
+  position: relative
+
+.v-dialog .v-data-table .v-data-footer,
+.ynv-app .ynv-card .core-card--main-slot .v-data-table .v-data-footer
+  position: absolute
+  left: 0
+  right: 0
+
+.ynv-app .ynv-card .row.ynv-card-toolbar .core-card--action-slot
+  padding-top: 21px !important
+  padding-right: 0 !important
+  padding-bottom: 0 !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-tab > .v-tabs-bar
+  padding: 0 48px 0 25px !important
+  margin-top: 18px !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel .v-expansion-panel .v-expansion-panel-header .subtitle
+  margin-left: 42px !important
+  text-align: left
+  font: normal normal 400 17px/20px Roboto
+  letter-spacing: 0
+  color: #12151A !important
+  opacity: 1
+  font-weight: normal
+  font-size: 17px !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel .v-expansion-panel .v-expansion-panel-header .v-icon
+  height: 15px
+  width: 15px
+  color: #C1C1C1
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel .v-expansion-panel-header,
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel .v-expansion-panel-header--active
+  padding: 19px 0 16px 10px !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel .v-expansion-panel-header .v-expansion-panel-header__icon
+  top: 26px !important
+  left: 27px !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel .v-expansion-panel-header--active .v-expansion-panel-header__icon
+  top: 30px !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel .v-expansion-panel-content__wrap
+  padding: 10px 30px 15px 35px !important
+
+.ynv-highlight
+  background: rgba(245, 245, 245, 0.38) !important
+  transition: 2s linear all
+
+#slot-receptionist
+  transition: 2s linear all
+
+//.ynv-app .ynv-card .v-card__text
+//  background: #FFFFFF !important
+
+.ynv-card .ynv-stepper .v-stepper__header,
+.ynv-card .ynv-stepper .v-stepper__content
+  padding: 0 !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .v-stepper.ynv-stepper
+  margin-top: 0 !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .v-tabs.ynv-card-tab
+  margin-top: 22px !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot
+  background: #FFFFFF !important
+
+.ynv-app .ynv-card .ynv-card-panel.v-expansion-panels
+  border: none !important
+  -webkit-box-shadow: none !important
+  -moz-box-shadow: none !important
+  box-shadow: none !important
+  border-radius: 0 !important
+
+.ynv-app .ynv-card .ynv-card-panel.v-expansion-panels
+  background: inherit 0 0 no-repeat padding-box !important
+
+.ynv-app .ynv-card .ynv-card-panel.container
+  background: #ffffff 0 0 no-repeat padding-box !important
+
+.core-notifications--v-navigation-drawer .actions-reports .row .col h5
+  text-transform: uppercase
+  font: normal normal bold 14px/17px Lato !important
+  font-size: 14px !important
+  font-weight: normal !important
+  margin-left: -5px
+  margin-bottom: 17px
+
+.core-notifications--v-navigation-drawer .actions-reports-alert.info .v-icon,
+.core-notifications--v-navigation-drawer .actions-reports-alert.info .v-icon .v-icon--svg,
+.core-notifications--v-navigation-drawer .actions-reports-alert.info .v-icon .v-icon__component
+  color: #696969 !important
+  opacity: 1
+  height: 22px
+  width: 22px
+
+.core-notifications--v-navigation-drawer .actions-reports-alert.info .v-icon svg
+  height: 16px !important
+  width: 16px !important
+
+.v-dialog .v-data-table.notifications--data-table .v-data-table__wrapper tbody tr td:first-child .v-avatar .v-icon,
+.c-notifications .v-navigation-drawer__content .v-list .v-list-item .v-avatar:not(.notification-dot) .v-icon
+  width: 19px !important
+  height: 19px !important
+  min-width: 19px !important
+  border-radius: 0 !important
+
+
+.corona-card
+  min-height: 424px
+
+.corona-card .corona-card--body
+  height: 338px
+  border-top: 1px solid #ccc
+
+.corona-card .corona-card--footer
+  height: 86px
+  border-top: 1px solid #ccc
+  padding: 15px 23px 20px 0
+
+.corona-card .corona-card--footer button
+  height: 41px !important
+
+.corona-card .button-close.v-btn.v-btn--contained:not(.primary)
+  background: #FFFFFF !important
+  color: #C1C1C1 !important
+  opacity: 1 !important
+  padding-right: 29px
+
+.corona-card .button-close.v-btn.v-btn--contained:not(.primary) .v-icon
+  height: 32px !important
+  width: 32px !important
+
+.core-notifications--v-navigation-drawer .notification-sys-bar .v-icon
+  height: 23px !important
+  width: 23px !important
+  color: #12151A !important
+
+.ynv-app .ynv-card .core-card--action-slot .v-input.search-field-box .v-input__control
+  min-height: 40px !important
+  box-shadow: none !important
+  border-radius: 5px
+
+.ynv-app .ynv-card .core-card--action-slot .v-input.search-field-box .v-input__control .v-input__slot,
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box.v-btn.v-btn--contained:not(.primary)
+  border: 1px solid #D4D9DE
+  border-radius: 5px
+  opacity: 1
+  box-shadow: none
+  background: transparent !important
+  color: #696969 !important
+
+.ynv-app .ynv-card .core-card--action-slot .v-btn:not(.v-btn--fav):not(.v-btn--round)
+  min-height: 40px
+  height: 40px !important
+  margin-top: 0 !important
+  margin-bottom: 0 !important
+
+//.ynv-app .ynv-card .core-card--action-slot .v-btn.primary
+//  min-height: 52px
+//  height: 52px !important
+
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box.v-btn.v-btn--contained:not(.primary)
+  padding-top: 5px
+  padding-bottom: 5px
+  color: #696969 !important
+  justify-items: end
+
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box.v-btn:before
+  background: transparent !important
+
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box
+  border: 1px solid #DAD9DE
+  background: transparent
+  color: #696969 !important
+
+.ynv-app .ynv-card .core-card--action-slot .v-input.search-field-box .v-input__control .v-input__slot .v-text-field__slot input,
+.ynv-app .ynv-card .core-card--action-slot .v-input.search-field-box .v-input__control .v-input__slot .v-text-field__slot .v-label,
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box .search-filter-box--title
+  text-align: left
+  font: normal normal 400 14px/22px Lato
+  letter-spacing: 0
+  opacity: 1
+  text-transform: capitalize
+  margin-left: 8px
+
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box .search-filter-box--icon
+  background: #D4D9DE 0 0 no-repeat padding-box !important
+  border-radius: 50%
+
+.ynv-app .ynv-card .core-card--action-slot .v-input__append-inner .v-icon,
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box .v-btn__content .v-icon
+  height: 24px !important
+  width: 24px !important
+
+.ynv-app .v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):not(.primary):not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):not(.v-btn--fav):not(.v-btn--round)
+  text-align: left
+  font: normal normal 400 14px/17px Lato
+  letter-spacing: 0
+  font-size: 14px
+  font-weight: normal
+  opacity: 1
+
+.ynv-app .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):not(.primary):not(.v-btn--fav):not(.v-btn--round)
+  color: #12151A
+  box-shadow: none
+  background: transparent
+
+.ynv-app .theme--dark.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):not(.primary):not(.v-btn--fav):not(.v-btn--round)
+  box-shadow: 0 2px 9px #06429A4B
+  border-radius: 5px
+
+.ynv-app .v-btn.primary:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined):not(.v-btn--fav):not(.v-btn--round)
+  background: #06429A 0 0 no-repeat padding-box
+  opacity: 1
+  text-align: left
+  font: normal normal 400 14px/17px Lato
+  letter-spacing: 0
+  color: #FFFFFF
+  font-size: 14px
+  font-weight: normal
+  box-shadow: 0 2px 9px #06429A4B
+  border-radius: 5px
+
+.headline-alert .row .col:first-child
+  margin-right: -15px !important
+
+.headline-alert .row .col:last-child
+  padding: 0 0 0 21px !important
+  text-align: center
+
+/* Dashboard */
+.app-selection .app-selection-menu--list .app-selection-menu--title
+  margin-bottom: 8px
+  margin-left: 12px
+
+.app-selection .app-selection-menu--list .app-selection-menu-inactive
+  margin-top: 4.15vh
+
+.app-selection .app-selection-menu--list .app-selection-menu--item
+  height: 83px
+
+.app-selection .app-selection-menu--list .app-selection-menu--item .v-btn
+  height: 64px
+  width: 64px
+
+.app-selection .app-selection-menu--list .app-selection-menu--item .v-btn .v-icon .v-icon__component
+  height: 31px
+  width: 27px
+
+.app-selection .app-selection--selected .app-selection--selected--div
+  padding: 21.3vh 5.1vw 26.9vh 4.5vw
+
+.ynv-app .ynv-card .core-card--main-slot .v-stepper--alt-labels .v-stepper__header .v-stepper__step + .v-divider
+  margin: 38px -72px 0
+
+.ynv-app .ynv-card .core-card--main-slot .v-stepper .v-stepper__header .v-stepper__step + .v-divider
+  border: 2px solid #D4D9DE
+
+.ynv-app .ynv-card .core-card--main-slot .theme--light.v-stepper .v-stepper__header .v-stepper__step + .v-divider
+  border-color: #D4D9DE
+
+.ynv-app .ynv-card .core-card--main-slot .v-stepper .v-stepper__header .v-stepper__step.v-stepper__step--editable.v-stepper__step--complete + .v-divider
+  border: 2px solid #06429A
+
+.ynv-app .ynv-card .core-card--main-slot .theme--light.v-stepper .v-stepper__header .v-stepper__step.v-stepper__step--editable.v-stepper__step--complete + .v-divider
+  border-color: #06429A
+
+.vueperslides .slide-content .media-preview
+  top: 35% !important
+  background: rgba(255, 255, 255, 0.9) 0 0 no-repeat padding-box
+  opacity: 1
+
+.vueperslides .slide-content .edit-media .v-icon,
+.vueperslides .slide-content .media-preview .v-icon
+  color: #12151A !important
+
+.v-dialog .v-data-table td button:not(.v-btn--fav):not(.v-btn--round), .ynv-app .ynv-card .core-card--main-slot .v-data-table td button:not(.v-btn--fav):not(.v-btn--round) .v-icon
+  height: 17px
+
+/* Icon size solution for server */
+.v-dialog .v-data-table td button:not(.v-btn--fav):not(.v-btn--round), .ynv-app .ynv-card .core-card--main-slot .v-data-table td button:not(.v-btn--fav):not(.v-btn--round) .v-icon--svg,
+.v-dialog .v-data-table td button:not(.v-btn--fav):not(.v-btn--round), .ynv-app .ynv-card .core-card--main-slot .v-data-table td button:not(.v-btn--fav):not(.v-btn--round) .v-icon__component
+  height: 18px
+
+.ynv-card .ynv-stepper .v-stepper__header, .ynv-card .ynv-stepper .v-stepper__content
+  padding: 7px !important
+
+//.ynv-app .ynv-card .core-card--main-slot .v-card__text div:not(.px-12.mx-5)
+//  padding: 0 27px 0 27px
+//
+//.ynv-app .ynv-card .core-card--main-slot .v-card__text div.px-12.mx-5
+//  margin-left: -22px !important
+//  margin-right: -22px !important
+
+.ynv-container.ynv-container--b .v-stepper.ynv-stepper .v-stepper__items .v-stepper__content .v-stepper__wrapper .v-card.ynv-card .container
+  background: #FFFFFF 0 0 no-repeat padding-box
+
+.ynv-container.ynv-container--b .v-stepper.ynv-stepper .v-stepper__items .v-stepper__content .v-stepper__wrapper .v-card.ynv-card
+  padding: 0 !important
+
+.core-notifications--v-navigation-drawer .actions-reports-alert-div
+  border-bottom: 1px solid #ccc
+
+.v-input.theme--light.v-input--switch .v-input--switch__track:not(.success--text)
+  color: #D4D9DE !important
+  opacity: 1 !important
+
+.v-input.v-input--is-label-active.theme--light.v-input--switch .v-input--switch__track:not(.success--text)
+  color: #06429a !important
+  opacity: 1 !important
+
+.v-input--switch .v-input--switch__thumb:not(.success--text)
+  color: #FFFFFF !important
+  opacity: 1 !important
+
+.ynv-card-dialog .v-card__title
+  text-align: left
+  font: normal normal bold 26px/32px Lato !important
+  letter-spacing: 0
+  color: #12151A
+  opacity: 1
+
+.ynv-card-dialog .v-card__text
+  padding-bottom: 0 !important
+
+.ynv-card-dialog .v-card__actions
+  border-top: #D4D9DE solid 1px
+  padding-top: 20px !important
+
+.app-selection .app-selection--selected--div .selected-icon,
+.app-selection .app-selection--selected--div .selected-icon .v-icon--svg,
+.app-selection .app-selection--selected--div .selected-icon .v-icon__component
+  font-size: 36px !important
+  height: 36px !important
+  width: 44px !important
+
+//.app-menu .app-menu--selected .selected-content .v-icon,
+//.app-menu .app-menu--selected .selected-content .v-icon .v-icon--svg,
+//.app-menu .app-menu--selected .selected-content .v-icon .v-icon__component
+//  font-size: 85px
+//  height: 85px
+//  width: 85px
+
+/* End - Same Sizes for each app menu - selected icon */
+
+.ynv-app .v-navigation-drawer.core-notifications--v-navigation-drawer,
+.ynv-app .v-navigation-drawer.core-notifications--v-navigation-drawer:before,
+.ynv-app .v-navigation-drawer.core-notifications--v-navigation-drawer:after
+  transition: none !important
+  transform: none !important
+
+.ynv-app .ynv-card .core-card--action-slot .v-btn:not(:last-child)
+  margin-right: 8px
+
+.container.zerberus-dashboard
+  background: #FFFFFF !important
+  margin-left: 10px
+  padding: 72px 67px 72px 67px
+
+.container.zerberus-dashboard .items-row .v-card
+  border: 1px solid #D4D9DE
+  border-radius: 5px
+  opacity: 1
+
+.container.zerberus-dashboard .zerberus-flip-cards:not(:last-child) .flip-card
+  width: 218px !important
+
+.container.zerberus-dashboard .zerberus-flip-cards:not(:last-child) .flip-card .flip-card-front:after
+  content: ""
+  height: 70%
+  width: 1px
+  background: #D4D9DE
+  opacity: 1
+  position: absolute
+  right: 0
+  top: 10%
+
+.container.zerberus-dashboard .zerberus-flip-cards .flip-card .flip-card-front .summary-box
+  text-align: left
+  letter-spacing: 0
+  color: #12151A
+  opacity: 1
+
+.container.zerberus-dashboard .zerberus-flip-cards .flip-card .flip-card-front .summary-box .summary-box-header .summary-box-title
+  font: normal normal 400 20px/24px Lato
+
+.container.zerberus-dashboard .zerberus-flip-cards .flip-card .flip-card-front .summary-box .summary-box-percent
+  font: normal normal 400 26px/32px Lato
+
+.container.zerberus-dashboard .zerberus-flip-cards .flip-card .flip-card-front .summary-box .summary-box-footer
+  font: normal normal 400 14px/17px Lato
+  color: #696969
+
+.container.zerberus-dashboard .zerberus-flip-cards .flip-card .flip-card-front .summary-box .summary-box-footer .summary-box-comparison
+  font-weight: 400
+  font-size: 14px
+
+.container.zerberus-dashboard .zerberus-flip-cards .flip-card .flip-card-front .summary-box .summary-box-footer .v-icon
+  background: transparent
+  opacity: 1
+  border-radius: 50%
+  margin-left: 0
+  padding: 1px
+  width: 18px !important
+  height: 18px !important
+
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports .v-input .v-input__slot,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports .v-input .v-input__slot .v-input--switch__thumb,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports .v-input .v-input__control,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports .v-text-field > .v-input__control > .v-input__slot:before, .v-text-field > .v-input__control > .v-input__slot:after,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports .v-input .v-input__control .v-select__selections,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports .v-input .v-input__control .v-menu,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports .v-input .v-input__control .v-text-field__details,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports .v-label,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .actions-reports-alert-div .v-alert.actions-reports-alert,
+.ynv-container--b .v-navigation-drawer.core-notifications--v-navigation-drawer .v-card .v-list .v-item-group
+  transition: none !important
+
+.ynv-container--b .v-stepper.ynv-stepper .v-stepper__step__step .v-icon.v-icon.v-icon--svg
+  height: 0.9rem
+  width: 0.9rem
+
+/* had to add because of unwanted margin in local server */
+.row
+  margin: 0 !important
+
+.user-info--b--div.dashboard .v-list-item .v-list-item-title--title
+  font: normal normal 400 18px/40px Lato !important
+
+.user-info--b--div.dashboard .v-list-item .v-list-item-title--sub-title
+  font: normal normal 400 16px/16px Lato !important
+
+.user-info--b--div.dashboard .app-selection--v-list-item
+  width: 320px
+
+.corona-card .corona-card--body .button-close
+  background: transparent !important
+  color: #C1C1C1 !important
+  opacity: 1
+
+.corona-card .corona-card--body .button-close.v-btn .v-icon--svg
+  height: 34px !important
+  width: 32px !important
+  fill: #C1C1C1 !important
+
+.core-card--action-slot .action-button-margin:not(:empty)
+  margin-left: 100px
+
+.ynv-container--b .container .stat-toolbar
+  margin: 0 12px 0 12px !important
+
+.ynv-container--b .container .summary-boxes-stats-wrapper
+  margin: 12px 0 !important
+//background: rgba(255, 255, 255, 1) !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item .v-text-field > .v-input__control > .v-input__slot:after, .theme--light.v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before, .theme--light.v-btn-toggle:not(.v-btn-toggle--group) .v-btn.v-btn
+  border: 1px solid #D4D9DE !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item button
+  border-radius: 0 !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item button:not(:last-child)
+  border-right: none
+
+.ynv-translation-tab
+  padding-left: 0
+  padding-right: 0
+
+/* Prevent double borders */
+
+/* Clear floats (clearfix hack) */
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item:after
+  content: ""
+  clear: both
+  display: table
+
+/* Add a background color on hover */
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item button:hover
+  background-color: #3e8e41
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item:first-child button
+  border-radius: 5px 0 0 5px !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item:last-child button
+  border-radius: 0 5px 5px 0 !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item:only-child button
+  border-radius: 5px !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .col.ynv-btn-item
+  flex-grow: 0 !important
+
+.core-notifications--v-navigation-drawer .notification-sys-bar .v-btn,
+.core-notifications--v-navigation-drawer .notification-sys-bar .v-btn:before,
+.core-notifications--v-navigation-drawer .notification-sys-bar .v-btn:after,
+.app-selection--v-list-item.menu--item.user--info.v-list-item,
+.app-selection--v-list-item.menu--item.user--info.v-list-item:before,
+.app-selection--v-list-item.menu--item.user--info.v-list-item:after
+  background-color: transparent !important
+  transition: none !important
+  -webkit-transition: none !important
+
+.app-selection-user-info.user-info--b--div.dashboard .app-selection--v-list-item.menu--item.user--info.v-list-item .v-ripple__container,
+.core-notifications--v-navigation-drawer .notification-sys-bar .v-btn .v-ripple__container
+  opacity: 0 !important
+  background: none !important
+
+.ynv-app .v-navigation-drawer__content
+  overflow-y: hidden !important
+  overflow-x: hidden !important
+  width: inherit !important
+
+.v-stepper.ynv-stepper .v-stepper__header .v-stepper__step .v-stepper__step__step.primary .v-icon
+  height: 24px !important
+  width: 20px !important
+
+.app-menu--selected .selected-content .selected-menu-icon-wrapper
+  width: 71px
+  height: 71px
+  text-align: center !important
+
+.app-menu--selected .selected-content .selected-menu-icon-wrapper .v-icon--svg,
+.app-menu--selected .selected-content .selected-menu-icon-wrapper .v-icon__component
+  font-size: 36px !important
+  height: 45px !important
+  width: 45px !important
+  color: #FFFFFF !important
+
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box .search-filter-active
+  color: #06429a !important
+
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box .search-filter-inactive
+  color: #696969 !important
+
+@media screen and (max-width: 1366px)
+  .app-selection .app-selection-menu--list .app-selection-menu--item
+    min-width: 12.5rem
+    max-width: 14.5rem
+
+@media screen and (min-width: 1440px)
+  .app-selection .app-selection-menu--list .app-selection-menu--item
+    min-width: 14.5rem
+    max-width: 14.5rem
+
+@media screen and (min-width: 2048px)
+  .app-selection .app-selection-menu--list .app-selection-menu--item
+    min-width: 15.5rem
+    max-width: 16.5rem
+
+.container.ynv-container.ynv-container--b .room-wrapper .v-card__actions .v-icon
+  margin-left: 4px
+
+.v-application--is-ltr .media-images-wrapper .v-responsive__sizer ~ .v-responsive__content
+  margin-left: -62% !important
+  margin-top: 25% !important
+
+.v-dialog .v-card__actions, .ynv-dialog .v-card__actions
+  margin-top: 8.5px
+
+.v-application .text-caption, .v-application .text-overline
+  font-size: 0.875rem !important
+  font-family: Lato, sans-serif !important
+
+.ynv-app .ynv-card-panel .v-expansion-panel-content
+  padding-bottom: 8.5px
+  margin-left: -10px
+  margin-bottom: 1%
+
+.v-dialog .v-data-table td button:not(.v-btn--fav):not(.v-btn--round).v-icon, .ynv-app .ynv-card .core-card--main-slot .v-data-table td button:not(.v-btn--fav):not(.v-btn--round).v-icon
+  height: 28px !important
+  width: 28px !important
+  padding: 2px !important
+
+.v-dialog .v-data-table td button:not(.v-btn--fav):not(.v-btn--round),
+.ynv-app .ynv-card .core-card--main-slot .v-data-table td button:not(.v-btn--fav):not(.v-btn--round)
+  width: fit-content !important
+
+.app-selection .app-selection-menu--list .app-selection-icons-div
+  overflow-y: scroll
+  height: 68vh
+  -ms-overflow-style: none
+  /* IE and Edge */
+  scrollbar-width: none
+
+.app-selection .app-selection-menu--list .app-selection-icons-div::-webkit-scrollbar
+  display: none
+
+.campaigns-edit-wrapper
+  padding: 0 10px 0 8px !important
+
+.vue-tel-input:focus-within
+  -webkit-box-shadow: none !important
+  box-shadow: none !important
+  border-color: transparent !important
+
+.vue-tel-input
+  border-style: none
+  border-radius: 0
+  /* border-bottom: 1px solid #e1e1e1 !important */
+  -webkit-box-shadow: none
+  box-shadow: none
+  padding: 0 4px 0 0
+
+.vti__dropdown
+  padding-top: 0 !important
+  padding-bottom: 0 !important
+
+.vti__dropdown-list
+  padding-left: 0 !important
+  z-index: 110
+
+.vti__selection
+  font-size: 0.95em !important
+
+.vti__dropdown-list .vti__dropdown-item.highlighted
+  color: rgba(0, 0, 0, 0.68)
+  background: #eeeeee
+  font-size: 0.95em !important
+
+.checkbox__error_message
+  position: absolute
+  margin-top: -16px
+
+.ynv-container.ynv-container--b .v-expansion-panels .v-expansion-panel .v-expansion-panel-content .v-expansion-panel-content__wrap .v-icon.ynv-c-edit--text,
+.ynv-container.ynv-container--b .v-list .v-list-item__action .v-icon.ynv-c-edit--text
+  margin-right: 5px
+
+.v-input .v-input__control .v-select__slot .v-input__append-inner .v-input__icon.v-input__icon--append .v-icon .v-icon__component
+  height: 24px
+  width: 14px
+
+.v-stepper.ynv-stepper .container.ynv-card-panel
+  margin-right: 0 !important
+  margin-left: 0 !important
+  width: 100%
+  margin-bottom: 5px !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .sortable-expansion-panels .v-expansion-panel.sortable-expansion-panel .v-expansion-panel-header .v-expansion-panel-header__icon
+  top: 30px !important
+  left: 25px !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .sortable-expansion-panels .v-expansion-panel.sortable-expansion-panel
+  margin: 0 !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .sortable-expansion-panels .v-expansion-panel.sortable-expansion-panel .v-expansion-panel-header
+  margin-left: 0 !important
+  padding: 24px 0 24px 96px !important
+
+.ynv-app .sortable-expansion-panels .v-expansion-panel.sortable-expansion-panel .v-expansion-panel-header
+  border: none !important
+
+.ynv-container.ynv-container--b .v-expansion-panels .v-expansion-panel .v-expansion-panel-content .v-icon.edit-icon.ynv-c-edit--text,
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .sortable-expansion-panels .v-expansion-panel.sortable-expansion-panel .row .v-icon
+  height: 20px !important
+  width: 20px !important
+
+.ynv-app .v-window .v-expansion-panel,
+.v-stepper.ynv-stepper .v-expansion-panel
+  box-shadow: none !important
+
+.ynv-app .v-window.v-tabs-items
+  padding: 0 10px 10px 0
+
+.ynv-app .v-window .ynv-card-panel,
+.v-stepper.ynv-stepper .ynv-card-panel
+  background: #FFFFFF 0 0 no-repeat padding-box !important
+
+.ynv-app .ynv-card .v-data-table tr td .v-chip .v-icon .v-icon__component
+  height: 18px
+  width: 24px
+
+@media only screen and (min-width: 1920px)
+  .v-stepper.ynv-stepper .container.ynv-card-panel .v-stepper__items .v-stepper__content .v-stepper__wrapper .ynv-card-panel.v-expansion-panels,
+  .v-stepper.ynv-stepper .container.ynv-card-panel .v-stepper__items .v-stepper__content .v-stepper__wrapper .container.ynv-card-panel
+    padding: 0 9% 0 9% !important
+
+@media only screen and (max-width: 1919px)
+  .v-stepper.ynv-stepper .container.ynv-card-panel .v-stepper__items .v-stepper__content .v-stepper__wrapper .ynv-card-panel.v-expansion-panels,
+  .v-stepper.ynv-stepper .container.ynv-card-panel .v-stepper__items .v-stepper__content .v-stepper__wrapper .container.ynv-card-panel
+    padding: 0 2% 0 2% !important
+
+.v-application .text-caption, .v-application .text-overline
+  font-size: 0.75rem !important
+
+.ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel.v-expansion-panels.communication-credits-edit .v-expansion-panel.v-expansion-panel--active .v-expansion-panel-content .v-expansion-panel-content__wrap
+  padding: 0 30px 55px 35px !important
+
+.ynv-app .ynv-card.ynv-card-edit .title-right-wrapper
+  padding: 0 0 10px 13px
+
+.ynv-app .ynv-card.ynv-card-edit .title-right-wrapper .v-btn
+  margin: 10px 8px 0 8px !important
+
+.ynv-container.ynv-container--b .core-flip-cards-wrapper
+  margin-left: 12px !important
+
+.ynv-container.ynv-container--b .summary-boxes-stats-wrapper .core-flip-cards-wrapper
+  margin-left: 0 !important
+
+// Scrollable fixes
+.v-app-bar--ynv-core-drawer-toolbar
+  position: fixed !important
+  top: 0 !important
+  height: 20px !important
+  width: 100%
+  border-radius: 25px 25px 25px 0
+  z-index: 5 !important
+  background-color: currentColor
+
+.v-app-bar--ynv-core-drawer-toolbar::before
+  position: fixed !important
+  content: ""
+  background-color: transparent
+  top: 20px
+  height: 38px
+  width: 10px
+  border-top-left-radius: 12px
+  -webkit-box-shadow: 0 -25px 0 0 #23262c
+  box-shadow: 0 -25px 0 0 #23262c
+  z-index: 5 !important
+
+.ynv-container.ynv-container--b .ynv-card .row.ynv-card-toolbar.ynv-card-toolbar-header,
+.ynv-container.ynv-container--b .ynv-card .row.v-app-bar--ynv-core-drawer-toolbar
+  position: fixed
+  top: 18px
+  left: 313px
+  z-index: 3 !important
+  background: #f7f8fc 0 0 no-repeat padding-box !important
+  padding: 0 33px 0 56px !important
+  width: calc(100% - 314px)
+
+.ynv-core-drawer-toolbar .v-toolbar__content
+  height: 0 !important
+
+.ynv-container.ynv-container--b .v-card.ynv-card .core-card--main-slot
+  margin-top: 20px
+
+.vueperslides .v-btn .v-icon,
+.core-media-image-card .edit-actions .v-btn .v-icon,
+.campaigns-edit-wrapper .edit-icon
+  width: 20px !important
+  height: 20px !important
+
+.ynv-card.v-card.notifications-list .v-data-table-header
+  line-height: 2.5 !important
+
+.ynv-card.v-card.notifications-list .v-btn .icon-menu-down
+  margin-left: 10px
+
+// hover imbalance in CampaignDetailsVariantsView
+.ynv-app .v-card .title-content-wrapper
+  min-height: 40px
+
+// disabled media in media management
+.ynv-disabled
+  opacity: 0.2 !important
+
+.ynv-media-disabled-text
+  font-size: 20px !important
+  font-weight: 400 !important
+
+.v-card.ynv-card.notifications-list .notifications-list--close-button.v-btn:before
+  margin: 0 12px
+
+.v-card.ynv-card.notifications-list .notifications-list--close-button.v-btn .v-ripple__container
+  opacity: 0 !important
+  background: none !important
+
+.ynv-app .ynv-card .core-card--action-slot .search-filter-box
+  margin: 0 !important
+
+//.ynv-app .ynv-card .core-card--action-slot .search-field-box
+//  margin-left: 8px !important
+
+.ynv-app .ynv-card .core-card--action-slot .search-field-box .v-input__append-inner
+  position: absolute !important
+  bottom: 6px
+  right: 6px
+
+.ynv-card.notifications-list .notifications-list--col-height
+  height: 58px
+
+.container.ynv-container .campaigns-edit-wrapper .single-variant-wrapper
+  min-height: 28px
+
+.variant-selected .ynv-container
+  position: relative
+
+.ynv-card.notifications-list .notifications-list--col-height .v-btn
+  min-height: 40px
+
+
+//Style for communication/campaigns mobile version
+//Badges:
+.badge-round
+  border-radius: 25px
+
+.badge-ribbon
+  border-radius: 5px 0px 0px 5px
+  width: 190px !important
+
+.ribbon-helper-top
+  width: 0
+  height: 0
+  border-left: 20px solid transparent
+  border-right: 20px solid transparent
+  border-top: 20px solid #ccc
+  position: absolute
+  right: -20px
+  top: 0
+
+.ribbon-helper-bottom
+  width: 0
+  height: 0
+  border-left: 20px solid transparent
+  border-right: 20px solid transparent
+  border-bottom: 20px solid #ccc
+  position: absolute
+  right: -20px
+  bottom: 0
+
+.badge-banner
+  border: none !important
+  z-index: 10
+
+.banner-helper
+  content: ''
+  z-index: 5
+  position: absolute
+  top: 34px
+  right: 1px
+  margin: 0 auto
+  width: 0
+  height: 0
+  border-left: solid 10px transparent
+  border-right: solid 10px transparent
+  filter: brightness(75%)
+  transform: rotate(135deg)
+
+//ENDBadges
+
+.bottom-dialog-hey
+  height: 50% !important
+  margin: 0 0 56px 0 !important
+  align-self: flex-end !important
+
+.before-tabs-mobile
+  margin-bottom: 50vh !important
+
+.tabs-mobile
+  position: fixed !important
+  bottom: 0 !important
+  left: 0 !important
+  background: white !important
+  padding: 10px 0 10px 0 !important
+  z-index: 10 !important
+
+.ynv-tabs .content-tabs-mobile
+  position: fixed !important
+  bottom: 53px !important
+  left: 0 !important
+  background: white !important
+  width: 100% !important
+  margin: 0 !important
+  height: 50vh !important
+  padding: 20px !important
+  z-index: 20 !important
+  overflow-y: auto !important
+  box-shadow: 0 -2px 2px -2px #ccc !important
+
+.arrow-down-mobile
+  position: absolute !important
+  top: -20px !important
+  right: 0 !important
+  z-index: 20 !important
+
+//END Style for communication/campaigns mobile version
+.ynv-right
+  position: absolute !important
+  right: 8px !important
+
+.ynv-top-right
+  position: absolute !important
+  top: 8px !important
+  right: 8px !important
+
+.ynv-bottom-right
+  position: absolute !important
+  bottom: 8px !important
+  right: 8px !important
+
+// Rotating icon
+@keyframes rotating
+
+  from
+    transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    -ms-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -webkit-transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+    -o-transform: rotate(360deg)
+    -ms-transform: rotate(360deg)
+    -moz-transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+
+@-webkit-keyframes rotating
+
+  from
+    transform: rotate(0deg)
+    -webkit-transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+
+.rotating
+  -webkit-animation: rotating 1s linear infinite
+  -moz-animation: rotating 1s linear infinite
+  -ms-animation: rotating 1s linear infinite
+  -o-animation: rotating 1s linear infinite
+  animation: rotating 1s linear infinite
+// End rotating icon
+
+//hide default icon for input type=date && type=time
+input[type="date"]::-webkit-calendar-picker-indicator
+  display: none
+
+input[type="time"]::-webkit-calendar-picker-indicator
+  background: none
+  display: none
+
+.v-dialog .v-data-table
+  margin-bottom: 48px
+
+.ynv-app .bn-mobile-menu
+  background: transparent linear-gradient(375deg, #1E2024 0%, #23262C 100%) 0 0 no-repeat padding-box !important
+  opacity: 1
+
+.ynv-app .bn-mobile-menu .v-btn:not(.v-btn--round).v-size--default
+  min-width: 48px !important
+
+.v-text-field input
+  padding: 10px 0 8px !important
+
+.v-text-field--outlined.v-input--dense .v-label
+  top: 14px !important
+
+.v-text-field--outlined.v-input--dense .v-label.v-label--active
+  top: 10px !important
+
+/** Redactor styles **/
+.redactor-styles
+  background: #FFFFFF
+
+.v-textarea .v-input__control .v-input__slot,
+.redactor-box.redactor-styles-on
+  border: 2px solid #D4D9DE !important
+  border-radius: 5px
+  background-color : #FFFFFF !important
+
+.v-textarea .v-input__control .v-input__slot:focus-within,
+.v-textarea .v-input__control .v-input__slot:hover,
+.pseudo-redactor .v-input__control .v-input__slot:focus-within,
+.pseudo-redactor .v-input__control .v-input__slot:hover,
+.redactor-focus.redactor-styles-on, .redactor-styles-on:hover, .redactor-focus:focus.redactor-styles-on
+  border-color: $primary !important
+
+.v-textarea .v-input__control .v-input__slot
+.pseudo-redactor .v-input__control .v-input__slot
+  background-color: #FFFFFF
+  border: 2px solid #D4D9DE !important
+  border-radius: 5px
+  padding: 0 0 0 18px
+
+.pseudo-redactor textarea
+  padding-top: 12px
+
+.pseudo-redactor .v-input__slot:before,
+.pseudo-redactor .v-input__slot:after
+  border-width: 0 !important
+
+.v-input fieldset
+  border-color: #D4D9DE
+
+.v-input:hover fieldset
+  border-color: $primary
+  border-width: 2px
+
+.v-text-field--outlined, .v-text-field--solo
+  border-radius: 5px !important
+
+.v-label.v-label--active.primary--text
+  color: black !important
+
+.v-input .v-input__append-inner
+  margin-top: 12px !important
+//
+//.pseudo-redactor,.pseudo-redactor:hover
+//  border: none !important
+
+.pseudo-redactor.v-text-field > .v-input__control > .v-input__slot:after,
+.pseudo-redactor.v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before,
+.pseudo-redactor.v-btn-toggle:not(.v-btn-toggle--group) .v-btn.v-btn
+  border: none !important
+
+.v-textarea.v-text-field > .v-input__control > .v-input__slot:before,
+.v-textarea.v-text-field > .v-input__control > .v-input__slot:after
+  bottom: 0 !important
+
+// undoing basic input effects for campaign user
+.core-drawer.v-navigation-drawer .v-input:hover fieldset,
+.v-text-field--outlined.v-input--is-focused fieldset
+  border-color: #D4D9DE !important
+  border-width: 1px !important
+  pointer-events: none
+
+.v-input__prepend-outer
+  margin-top: 10px !important
+
+.v-input__prepend-inner
+  margin-top: 12px !important
+
+.v-input__append-outer
+  margin-top: 16px !important
+
+.v-input--selection-controls
+  margin-top: 7px !important
+  padding-top: 5px !important
+
+.v-input.v-input--selection-controls.v-input--switch
+  margin-left: 7px
+
+.ynv-app .ynv-card .core-card--action-slot .search-field
+  gap: 8px
+
+.search-field-box .v-input__prepend-inner
+  margin-top: 0 !important
+
+/** Mobile Only **/
+@media only screen and (max-width: 900px) and (orientation : portrait)
+  .ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-tab > .v-tabs-bar,
+  .ynv-app .ynv-card.ynv-card-edit .core-card--main-slot .ynv-card-panel .v-expansion-panel-content__wrap
+    padding: 4px !important
+
+.ynv-app .ynv-card .core-card--main-slot .v-data-table--mobile .v-data-table__wrapper thead tr th:first-child, .ynv-app .ynv-card .core-card--main-slot .v-data-table--mobile .v-data-table__wrapper tbody tr td:first-child
+  padding-left: 16px !important
+
+
+
+/** start - Circular background for showing name initial as an image **/
+.circular-initial
+  background-color: #f3f3f3
+  width: 50px
+  padding-top: 50px
+  border-radius: 50%
+  position: relative
+/** end - Circular background for showing name initial as an image **/
+
+/** start - To show triangle on each side of the div **/
+.triangle-left
+  margin-left: 15px
+  contain: initial
+  overflow: visible
+
+.triangle-left::before
+  position: absolute
+  content: ""
+  top: 25px
+  left: -15px
+  width: 15px
+  height: 30px
+  border-top: 15px solid transparent
+  border-bottom: 15px solid transparent
+  border-right: 15px solid #fff
+  shadow: 1px #0B0E12
+
+.triangle-right
+  margin-right: 15px
+  contain: initial
+  overflow: visible
+
+.triangle-right::before
+  position: absolute
+  content: ""
+  top: 25px
+  right: -15px
+  width: 15px
+  height: 30px
+  border-top: 15px solid transparent
+  border-bottom: 15px solid transparent
+  border-left: 15px solid #fff
+
+/** end - To show triangle on each side of the div **/
+
+.segment-type-text
+  text-align: justify
+  font: normal normal normal 12px/18px Lato
+  letter-spacing: 0
+  color: #12151A
+  opacity: 0.6
+
+
+/** start - chips spacing in v-select and v-autocomplete **/
+.v-input.v-select.v-select--chips .v-select__slot
+  padding: 4px 0
+
+.v-input.v-select.v-select--chips .v-select__slot .v-chip
+  margin: 4px
+/** end - chips spacing in v-select and v-autocomplete **/
+
+.search-field-box .is-mobile.search-results-datasets .v-menu__content
+  min-width: 65vw
+
+
+/** start - data-table general classes updates **/
+
+.v-data-table .v-data-footer .v-input .v-input__append-inner
+  margin-top: 5px !important
+
+.v-data-table .v-data-footer .v-text-field > .v-input__control > .v-input__slot:before,
+.v-data-table .v-data-footer .v-text-field > .v-input__control > .v-input__slot:after
+  bottom: 5px !important
+
+.v-data-table .v-data-footer .v-text-field > .v-input__control > .v-input__slot:after,
+.v-data-table .v-data-footer .v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before,
+.v-data-table .v-data-footer .v-btn-toggle:not(.v-btn-toggle--group) .v-btn.v-btn
+  border: 1px solid #696969 !important
+  background: #696969 !important
+
+/** end - data-table general classes updates **/
+.search-field-box .search-results-datasets
+  position: relative
+
+
+@media only screen and (max-width: 759px)
+  .ynv-card-edit .v-expansion-panel-header--active .v-expansion-panel-header__icon
+    top: 58px
+
+.rotating-inner.v-icon .v-icon--svg
+  -webkit-animation: rotating 1s linear infinite
+  -moz-animation: rotating 1s linear infinite
+  -ms-animation: rotating 1s linear infinite
+  -o-animation: rotating 1s linear infinite
+  animation: rotating 1s linear infinite
+
+.v-icon .v-icon--svg svg
+  pointer-events: none

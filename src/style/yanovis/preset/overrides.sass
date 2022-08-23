@@ -1,0 +1,1265 @@
+@import './variables.scss'
+@import '~vuetify/src/styles/tools/_functions.sass'
+nav.core-drawer ::-webkit-scrollbar
+  width: 8px
+
+nav.core-drawer ::-webkit-scrollbar-track
+  border-radius: 5px
+
+nav.core-drawer ::-webkit-scrollbar-thumb
+  background: #5e5e5e
+  border-radius: 5px
+
+nav.core-drawer ::-webkit-scrollbar-thumb:hover
+  background: #5e5e5e
+
+
+//.v-badge
+//  &__badge
+//    border-radius: 0
+//
+//.theme--light
+//  .v-app-bar.v-toolbar.v-sheet
+//    background-color: map-deep-get($colors, 'red', 'base')
+.ynv-grey
+  background: #FBFBFD
+
+.ynv-relative
+  position: relative !important
+
+.ynv-absolute
+  position: absolute !important
+
+.ynv-full-max-width
+  max-width: 100% !important
+
+.ynv-full-width
+  width: 100% !important
+
+.ynv-full-height
+  height: 100% !important
+
+.ynv-close
+  position: absolute
+  right: 19px
+  top: 10px
+  z-index: 99
+
+header.theme--light .logo-dark
+  display: none
+
+header.theme--dark .logo-light
+  display: none
+
+.menu-open .favicon
+  display: none
+
+/* RUNNING DOTS ANIMATION/LOADING */
+.ynv-loading .ynv-running_dot
+  animation: 2s blink infinite
+
+.ynv-loading .ynv-running_dot:nth-child(2)
+  animation-delay: 500ms
+
+.ynv-loading .ynv-running_dot:nth-child(3)
+  animation-delay: 1s
+
+/* BIG DOTS CORRESPONDENCE ANIMATION/LOADING */
+$loader--width: 300px
+$loader-dot--size: 20px
+
+.container-loader
+  width: 100%
+
+.loader
+  height: $loader-dot--size
+  width: $loader--width
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+
+  &--dot
+    animation:
+      name: loader
+      timing-function: ease-in-out
+      duration: 3s
+      iteration-count: infinite
+    height: $loader-dot--size
+    width: $loader-dot--size
+    border-radius: 100%
+    background-color: black
+    position: absolute
+    border: 0px solid white
+
+    &:first-child
+      background-color: #235DAE
+      animation-delay: 0.6s
+
+    &:nth-child(2)
+      background-color: #5C3394
+      animation-delay: 0.4s
+
+    &:nth-child(3)
+      background-color: #118F9A
+      animation-delay: 0.3s
+
+    &:nth-child(4)
+      background-color: #69A94F
+      animation-delay: 0.2s
+
+    &:nth-child(5)
+      background-color: #E58B06
+      animation-delay: 0.1s
+
+    &:nth-child(6)
+      background-color: #BA4101
+      animation-delay: 0s
+
+
+@keyframes loader
+  15%
+    transform: translateX(0)
+
+  45%
+    transform: translateX($loader--width - $loader-dot--size)
+
+  65%
+    transform: translateX($loader--width - $loader-dot--size)
+
+  95%
+    transform: translateX(0)
+
+@keyframes blink
+  50%
+    color: transparent
+
+/* RUNNING DOTS ANIMATION/LOADING */
+
+
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity $menu-navigation-delay
+//
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+.ynv-c-red-input input
+  color: red !important
+
+.vld-icon
+  width: 70px
+  height: 70px
+
+.ynv-underlined
+  text-decoration: underline
+
+.ynv-underlined-gray:hover
+  text-decoration: underline
+  -webkit-text-decoration-color: #8c8c8c !important
+  text-decoration-color: #8c8c8c !important
+
+
+.ynv-pointer
+  cursor: pointer
+
+.ynv-progress
+  cursor: progress !important
+
+.ynv-grab
+  cursor: url(https://ssl.gstatic.com/ui/v1/icons/mail/images/2/openhand.cur), grab !important
+
+.ync-self-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.ynv-title
+  font-size: 18px
+
+.ynv-title-login
+  font-size: 24px
+
+.ynv-card-title-two-column
+  font-size: 20px
+  font-weight: 400
+  margin-top: -6px
+
+/** v-card **/
+.v-card .v-card__title
+  font-weight: 400
+/** v-card **/
+
+/** Box-Shadow **/
+.ynv-elevation-1
+  box-shadow: 0px 2px 6px #0000002E
+
+.ynv-elevation-2
+  box-shadow: 0px 1px 6px #00000029
+/** End Box-Shadow **/
+
+
+
+/** OK 2.0 Tabs **/
+
+.active_tab_color
+  background: #efeff1
+
+.tab_wrapper
+  display: flex
+  border: 1px solid #EDEDED
+  border-radius: 3px
+
+.ynv-app .theme--light.ynv-card-tab > .v-tabs-bar
+  padding: 0 48px 0 68px
+  margin-top: -21px
+  background: #f5f5f5
+
+@media only screen and (max-width: 959px)
+  .ynv-app .theme--light.ynv-card-tab > .v-tabs-bar
+    padding: 10px 6px 0 !important
+    height: 32px
+    margin-top: 0 !important
+
+
+@media only screen and (max-width: 756px)
+  .ynv-app .theme--light.ynv-card-tab > .v-tabs-bar
+    padding: 0 16px
+  .ynv-app .ynv-card-tab > .v-tabs-bar .v-tab
+    margin-right: 20px !important
+
+
+.v-slide-group.v-item-group > .v-slide-group__prev
+  justify-content: start
+
+
+.v-slide-group.v-item-group > .v-slide-group__next
+  justify-content: flex-end
+
+
+.ynv-app .ynv-card-tab > .v-tabs-bar .v-tab
+  padding: 6px 0
+  text-transform: none
+  font-weight: 400
+  margin-right: 100px
+  font-size: 16px
+
+.ynv-app .ynv-card-tab > .v-tabs-bar .v-tabs-slider
+  height: 1px
+
+
+/** END Tabs **/
+
+/* begin Toolbas*/
+.ynv-card .v-toolbar__content
+  padding-left: 0 !important
+/* end Toolbas*/
+
+
+ /** OK 2.0 Panels **/
+
+.ynv-app .ynv-card-panel
+  -webkit-box-shadow: none
+  box-shadow: none
+  width: auto
+  border: none
+
+
+.ynv-app .ynv-card-panel .v-expansion-panel
+  border-bottom: 7px solid #f5f5f5
+
+.ynv-app .ynv-card-panel .v-expansion-panel::after
+  border-top: 0
+
+.ynv-app .ynv-card-panel .v-expansion-panel::before
+  -webkit-box-shadow: none
+  box-shadow: none
+  border: none
+
+.ynv-highlight
+  background: rgba(245, 245, 245, 0.38) !important
+  transition: 2s linear all
+
+#slot-receptionist
+  transition: 2s linear all
+
+.ynv-app .ynv-card-panel .v-expansion-panel-header
+  padding: 25px 48px
+  cursor: default
+
+.ynv-app .ynv-card-panel .v-expansion-panel-header .subtitle
+  color: #434343 !important
+
+.ynv-app .ynv-card-panel .v-expansion-panel-header--active
+  padding: 55px 48px 25px 48px !important
+
+.ynv-app .ynv-card-panel .v-expansion-panel-content__wrap
+  padding: 0 48px 66px 68px
+
+.ynv-card-edit .v-expansion-panel-header__icon
+  position: absolute
+  height: 18px
+  width: 18px
+  left: 71px
+  top: 28px
+
+.ynv-card-edit .v-expansion-panel-header__icon button
+  height: 18px
+  width: 18px
+
+.ynv-card-edit .v-expansion-panel-header--active .v-expansion-panel-header__icon
+  top: 58px
+
+
+@media only screen and (max-width: 759px)
+  .ynv-card-edit .v-expansion-panel-header .v-expansion-panel-header__icon
+    left: 22px
+    top: 28px
+
+  .ynv-card-edit .v-expansion-panel-header--active .v-expansion-panel-header__icon
+    top: 49px
+
+  .ynv-app .ynv-card-panel .v-expansion-panel-header--active
+    padding-left: 20px !important
+
+
+.ynv-app .ynv-card-panel .v-expansion-panel-content .container:first-child
+  padding-top: 0 !important
+
+
+.ynv-app .ynv-card-panel.theme--light.v-expansion-panels .v-expansion-panel--disabled
+  color: inherit
+
+
+@media only screen and (max-width: 959px)
+  .ynv-app .ynv-card-panel
+    margin: 0 0
+
+
+  .ynv-app .ynv-card-panel .v-expansion-panel-content__wrap
+    padding: 0 18px 66px 18px
+
+
+  .ynv-app .ynv-card-panel .v-expansion-panel-header
+    padding: 24px 36px 24px 15px
+
+
+/** END Panels **/
+
+
+/** begin dialog **/
+
+
+
+
+.ynv-card-dialog .v-card__title
+  font-size: 24px !important
+
+
+.ynv-card-dialog .v-card__title .btn-close
+  position: absolute
+  right: 19px
+  top: 14px
+
+
+.ynv-card-dialog.v-card__title .v-icon
+  font-size: 30px
+
+.ynv-card-dialog .v-card__actions .v-btn
+  min-width: 150px
+
+@media only screen and (max-width: 959px)
+  .ynv-card-dialog .v-card__actions .v-btn
+    min-width: 0px !important
+
+.ynv-confirm .ynv-card-dialog .v-card__actions .v-btn
+  min-width: 0px !important
+
+
+.ynv-card-dialog .v-card__actions > *:last-child
+  margin-left: 20px !important
+
+/** end dialog **/
+
+/** begin INPUT  **/
+.filter-applied .v-icon
+  color: var(--v-success-base) !important
+
+
+.theme--light.v-text-field > .v-input__control > .v-input__slot:before
+  border-color: #e1e1e1
+
+.v-input--checkbox .v-icon
+  color: #1E5AAC
+
+/** end INPUT  **/
+
+
+
+ /** begin Buttons **/
+.v-btn
+  text-transform: none !important
+
+.v-btn::first-letter
+  text-transform: capitalize !important
+
+
+.v-text-field > .v-input__control > .v-input__slot:after,
+.theme--light.v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before,
+.theme--light.v-btn-toggle:not(.v-btn-toggle--group) .v-btn.v-btn
+  border-color: #eeeeee !important
+
+.theme--light.v-btn:not(.v-btn--icon):not(.v-btn--text):not(.v-btn--outlined)
+  background-color: #ededed
+
+.ynv-btn-item .v-btn
+  border-top-right-radius: 0
+  border-bottom-right-radius: 0
+  border: 1px solid #EDEDED
+  border-right: 0px
+
+.ynv-btn-item + .ynv-btn-item .v-btn
+  //border-top-left-radius: 0
+  //border-bottom-left-radius: 0
+  //border-top-right-radius: 3px
+  //border-bottom-right-radius: 3px
+  border-radius: 0
+  border-left: 0px
+  border-left: 1px solid #EDEDED
+
+.ynv-btn-item:last-child .v-btn
+  border-top-left-radius: 0
+  border-bottom-left-radius: 0
+  border-top-right-radius: 3px
+  border-bottom-right-radius: 3px
+  border-right: 1px solid
+  border-left: 1px solid #EDEDED
+
+
+.ynv-btn-lang-select
+  border: 1px solid #EDEDED
+
+.ynv-btn-lang-select.v-item--active
+  background-color: #eeeeee !important
+  color: #434343 !important
+
+.ynv-btn-lang-select.v-item--active::before
+  opacity: 0 !important
+  background-color: transparent !important
+
+.v-btn:not(.v-btn--round).v-size--large
+  height: 38px
+  min-width: 148px
+  padding: 10px 48px
+
+.v-btn.yvn-btn-lang
+  min-width: 27px !important
+  height: 27px !important
+  font-size: 14px !important
+  font-weight: normal !important
+
+
+.v-btn.yvn-btn-lang.active
+  border: 1px solid $data-table-lang-border !important
+  color: $data-table-text-color !important
+
+.ynv-btn-action
+  min-width: 180px !important
+
+.v-speed-dial.v-speed-dial-action-mobile .v-speed-dial-action-mobile-child-wrapper
+  width: 100vw
+  position: absolute
+  bottom: 0
+  right: 0
+
+.v-speed-dial.v-speed-dial-action-mobile .v-speed-dial-action-mobile-child-wrapper .v-speed-dial-action-mobile-child .text-wrapper
+  background: #FFFFFF
+  color: #777777
+  font-weight: 600
+  border-radius: 10px
+  border: 0 solid #0B0E12
+
+.v-speed-dial.v-speed-dial-action-mobile,
+.v-btn.ynv-btn-action-mobile
+  position: fixed
+  bottom: 16px
+  right: 16px
+  z-index: 9
+
+/** end Buttons **/
+
+/** begin stepper **/
+.ynv-card .ynv-stepper
+  margin-top: -20px
+/* reducing the distance for CoreCardEdit */
+
+.ynv-stepper .v-stepper__header
+  background: #f5f5f5
+  padding: 0 48px
+
+.theme--light .v-stepper .v-stepper__header .ynv-divider
+  width: 33px
+  margin: 40px 15px
+  height: 1px
+  background: repeating-linear-gradient(to right, #BCBCBC 0, #BCBCBC 8px, transparent 4px, transparent 12px)
+
+.theme--light.v-stepper .v-stepper__step--active .v-stepper__label
+  color: $primary
+
+.ynv-stepper .v-stepper__step__step
+  min-height: 32px
+  min-width: 32px
+
+.ynv-stepper .v-stepper__content .v-btn
+  margin-left: 16px
+
+@media only screen and (max-width: 767px)
+  .ynv-stepper .v-stepper__header
+    padding: 0 20px
+  .theme--light .v-stepper .v-stepper__header .ynv-divider
+    margin: 40px 0px
+/** end stepper **/
+
+
+/* begin v-card*/
+.ynv-card .search-field
+  min-width: 293px
+/* end v-card*/
+/** OK 2.0 basic styles **/
+.ynv-container
+  padding: 34px 34px
+
+@media only screen and (max-width: 767px)
+  .v-dialog .v-input__icon--append .v-icon
+    font-size: 20px !important
+
+/** end basic styles **/
+
+.rotating-icon
+  -webkit-animation: spin 2s linear infinite
+  -moz-animation: spin 2s linear infinite
+  animation: spin 2s linear infinite
+
+@-moz-keyframes spin
+  100%
+    -moz-transform: rotate(360deg)
+
+@-webkit-keyframes spin
+  100%
+    -webkit-transform: rotate(360deg)
+
+@keyframes spin
+  100%
+    -webkit-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+/** Communication navigation drawer **/
+.info-carousel
+  height: fit-content !important
+  padding: 0 30px 30px
+
+.info-carousel .v-carousel__controls
+  display: flex
+  justify-content: start
+
+.info-carousel .v-carousel__controls .v-item-group button
+  margin: 18px 1px 0 0 !important
+  color: #ffffff1a !important
+
+.info-carousel .v-carousel__controls .v-item-group button .v-btn__content .v-icon--svg
+  font-size: 10px !important
+  height: 10px !important
+  width: 10px !important
+
+.info-carousel .v-carousel__controls .v-item-group button
+  font-size: 10px !important
+  height: 10px !important
+  width: 10px !important
+
+.info-carousel .theme--dark.v-btn--active:hover::before, .theme--dark.v-btn--active::before
+  opacity: 0
+
+.info-carousel .theme--dark.v-btn--active, .theme--dark.v-btn--active
+  background: transparent
+  border: none
+
+.v-carousel__controls__item .v-icon
+  opacity: 1
+
+info-carousel .theme--dark.v-btn--active, .theme--dark.v-btn--active svg
+  color: #ffffff
+
+.v-application--is-ltr .v-window__prev
+  left: -44px
+
+.v-application--is-ltr .v-window__next
+  right: -44px
+
+.v-window__prev, .v-window__next
+  z-index: 25
+
+
+
+  /** End  **/
+
+/** OK 2.0 begin navigation drawer **/
+.ynv-app .v-navigation-drawer
+  transition: $menu-navigation-delay cubic-bezier(0.6, 0.04, 0.19, 0.99)
+
+.ynv-app .v-navigation-drawer .v-list-group .item__title,
+.ynv-app .v-navigation-drawer .v-list-group a,
+.ynv-app .v-navigation-drawer .v-list-item__title
+  opacity: 1 !important
+  transition: opacity $menu-navigation-item-delay cubic-bezier(0.62, -0.01, 0.25, 0.98)
+  -moz-transition: opacity $menu-navigation-item-delay cubic-bezier(0.62, -0.01, 0.25, 0.98)
+  -webkit-transition: opacity $menu-navigation-item-delay cubic-bezier(0.62, -0.01, 0.25, 0.98)
+  height: auto !important
+  position: relative !important
+
+.ynv-app .v-navigation-drawer--mini-variant .v-list-group .item__title,
+.ynv-app .v-navigation-drawer--mini-variant .v-list-group a,
+.ynv-app .v-navigation-drawer--mini-variant .v-list-item__title
+  opacity: 0 !important
+  width: auto !important
+  overflow: hidden !important
+  clip: auto !important
+
+.ynv-app .v-navigation-drawer .theme--dark.v-list-item
+  height: 50px
+  margin: 7px 0
+  justify-content: start
+  padding-left: 35px
+// justify-content: start padding-left: 35px because the width of the mini-variant is specified and there is a bag  with the alignment
+
+.ynv-app .v-navigation-drawer .theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
+  color: rgba(255, 255, 255, .45) !important
+
+.ynv-app .v-list-item--active::before
+  background-color: #000000
+  opacity: 0.13 !important
+
+.ynv-app .v-navigation-drawer .theme--dark.v-icon
+  color: inherit
+
+.v-application--is-ltr .v-list-item__action:first-child, .v-application--is-ltr .v-list-item__icon:first-child
+  margin-right: 20px
+
+/** end navigation drawer **/
+
+/** begin menu **/
+.ynv-menu
+  overflow: visible
+  contain: layout
+
+.ynv-arrow-t:before, .ynv-arrow-t:after, .ynv-arrow-t-user:before, .ynv-arrow-t-user:after
+  position: absolute
+  content: " "
+  border-bottom: 60px solid transparent
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  left: 7.5%
+  margin-left: -10px
+  z-index: -10
+  -webkit-filter: drop-shadow(0px 2px 6px #0000002E)
+    filter: drop-shadow(0px 2px 6px #0000002E)
+
+.ynv-arrow-b:after
+  position: absolute
+  content: " "
+  border-bottom: 20px solid transparent
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  border-radius: 2px
+  left: 7.5%
+  margin-left: 24px
+  margin-top: 112px
+  transform: rotate(45deg)
+  z-index: -3
+  background: inherit
+
+.ynv-arrow-t-user:before, .ynv-arrow-t-user:after
+  left: 87%
+
+@media only screen and (max-width: 769px)
+  .ynv-arrow-t:before, .ynv-arrow-t:after
+    left: 26%
+
+  .ynv-arrow-t-user:before, .ynv-arrow-t-user:after
+    left: 85%
+
+
+.ynv-arrow-t:before, .ynv-arrow-t-user:before
+  top: -14px
+
+.ynv-arrow-t:after, .ynv-arrow-t-user:after
+  border-bottom: 14px solid #fff
+  top: -11px
+
+/** end menu **/
+
+@media only screen and (max-width: 767px)
+  .v-input__icon--append .v-icon
+    font-size: 30px
+
+  .v-input__icon--prepend-inner .v-icon
+    font-size: 30px
+
+/* Data Tables */
+.v-data-table,
+.v-data-table th,
+.v-data-table td
+  color: $data-table-text-color !important
+
+.v-data-table .v-avatar
+  margin: 5px 0
+
+.v-data-table .v-data-footer
+  height: 60px
+  padding-top: 10px
+  padding-left: 0
+
+.v-data-table .v-data-footer
+  justify-content: left
+
+.v-data-table .v-data-footer .v-data-footer__pagination
+  position: absolute
+  right: 130px
+
+.v-data-table .v-data-footer__icons-after
+  position: absolute
+  right: 30px
+
+.v-data-table .v-data-footer__icons-before
+  position: absolute
+  right: 70px
+
+.v-application--is-ltr .v-data-footer__select
+  margin-left: 0
+
+/* Data Tables row selection */
+.v-data-table.has-select tr > td:first-child,
+.v-data-table.has-select tr > th:first-child
+  padding-right: 0
+  padding-left: 12px
+  min-width: 36px !important
+
+.v-data-table.has-select tr > td:first-child .v-input--selection-controls__input,
+.v-data-table.has-select tr > th:first-child .v-input--selection-controls__input
+  margin-right: 0
+  display: block
+
+.v-data-table.has-select tr:hover td .multi-op-checkbox
+  display: block !important
+
+.v-data-table.has-select tr td .multi-op-checkbox
+  display: none !important
+
+.multi-op-checkbox .v-simple-checkbox .v-icon
+  color: rgba(194, 194, 194, 1)
+
+.v-data-table.has-select tr td .multi-op-checkbox .v-simple-checkbox .v-icon
+  color: rgba(194, 194, 194, 1)
+
+.v-data-table.has-select tr td .multi-op-checkbox:hover .v-simple-checkbox .v-icon,
+.multi-op-checkbox .v-simple-checkbox:hover .v-icon
+  color: rgba(0, 0, 0, 0.54)
+
+.v-data-table.has-select tr td .multi-op-checkbox .v-simple-checkbox .v-icon.v-icon--disabled,
+.multi-op-checkbox .v-simple-checkbox:hover .v-icon.v-icon--disabled
+  color: rgba(194, 194, 194, 1) !important
+
+.table-row > .v-data-table__wrapper > table > tbody > tr:hover > td > div > div > .action-on-hover
+  visibility: visible !important
+
+.table-row > .v-data-table__wrapper > table > tbody > tr > td > div > div > .action-on-hover
+  visibility: hidden !important
+
+.table-row > .v-data-table__wrapper > table > tbody > tr:hover > td > div > div > .action-no-hover
+  visibility: hidden !important
+
+.table-row > .v-data-table__wrapper > table > tbody > tr > td > div > div > .action-no-hover
+  visibility: visible !important
+
+@media only screen and (max-width: 767px)
+  .v-data-table .v-data-footer__icons-after
+    right: 10px
+
+  .v-data-table .v-data-footer__icons-before
+    right: 50px
+
+.theme--light.v-label
+  color: #919191 !important
+
+.msg-count .v-badge__badge
+  min-width: 13px !important
+  font-size: 10px !important
+  height: 13px !important
+  padding: 2px 4px !important
+
+.v-list-group__header__append-icon
+  margin-left: auto !important
+
+pre
+  font-family: "Roboto", sans-serif
+
+
+.whatsapp-message p,
+.redactor-styles p
+  margin-bottom: 0px !important
+
+
+.core-drawer--v-list
+  padding-top: 20px
+  padding-bottom: 20px
+  height: 90px
+  background: #25292E
+
+.core-drawer--logo
+  width: 38px
+  position: absolute
+  top: 20px
+  left: 28px
+
+.core-drawer--negative-logo
+  height: 65px
+  position: absolute
+  left: 20px
+  bottom: 0
+
+.core-toolbar--app-bar
+  z-index: 6
+  height: 70px
+
+.v-app-bar.v-app-bar--fixed
+  position: fixed
+  top: 0
+/* z-index: 5;
+
+.v-list--toolbar-header
+  height: 70px
+
+
+.primary-line
+/*font-weight: bold !important;*/
+
+.secondary-line
+  color: #8c8c8c !important
+
+.core-drawer--menu--slot
+  overflow-y: auto
+  height: calc(100% - 84px)
+  overflow-x: hidden
+
+.vue-tel-input:focus-within
+  -webkit-box-shadow: none !important
+  box-shadow: none !important
+  border-color: transparent !important
+  border-bottom: 2px solid #eeeeee !important
+
+.vue-tel-input
+  border: none
+  border-radius: 0
+  border-bottom: 1px solid #e1e1e1 !important
+  box-shadow: none
+  border-right: none
+
+.vti__dropdown
+  padding-top: 0 !important
+  padding-bottom: 0 !important
+
+.vti__dropdown-list
+  padding-left: 0 !important
+  z-index: 110
+
+.vti__selection
+  font-size: 0.95em !important
+
+.vti__dropdown-list .vti__dropdown-item.highlighted
+  color: rgba(0, 0, 0, 0.68)
+  background: #eeeeee
+
+.checkbox__error_message
+  position: absolute
+  margin-top: -16px
+
+// hover imbalance in CampaignDetailsVariantsView
+.ynv-app .v-card .title-content-wrapper
+  min-height: 40px
+
+// disabled media in media management
+.ynv-disabled
+  opacity: 0.2 !important
+
+.ynv-media-disabled-text
+  font-size: 20px !important
+  font-weight: 400 !important
+
+.v-card.ynv-card.notifications-list .notifications-list--close-button.v-btn
+  margin: 0 12px
+
+.ynv-card.notifications-list .notifications-list--col-height
+  height: 38px
+
+.container.ynv-container .campaigns-edit-wrapper .single-variant-wrapper
+  min-height: 28px
+
+//Style for communication/campaigns mobile version
+
+.bottom-dialog-hey
+  height: 50% !important
+  margin: 0 0 56px 0 !important
+  align-self: flex-end !important
+
+.before-tabs-mobile
+  margin-bottom: 50vh !important
+
+.tabs-mobile
+  position: fixed !important
+  bottom: 0 !important
+  left: 0 !important
+  background: white !important
+  padding: 10px 0 10px 0 !important
+  z-index: 10 !important
+
+.ynv-tabs .content-tabs-mobile
+  position: fixed !important
+  bottom: 53px !important
+  left: 0 !important
+  background: white !important
+  width: 100% !important
+  margin: 0 !important
+  height: 50vh !important
+  padding: 20px !important
+  z-index: 20 !important
+  overflow-y: auto !important
+  box-shadow: 0 -2px 2px -2px #ccc !important
+
+.arrow-down-mobile
+  position: absolute !important
+  top: -20px !important
+  right: 0 !important
+  z-index: 20 !important
+
+//END Style for communication/campaigns mobile version
+//Badges:
+.badge-round
+  border-radius: 25px
+
+.badge-ribbon
+  border-radius: 5px 0px 0px 5px
+  width: 190px !important
+
+.ribbon-helper-top
+  width: 0
+  height: 0
+  border-left: 20px solid transparent
+  border-right: 20px solid transparent
+  border-top: 20px solid black
+  position: absolute
+  right: -20px
+  top: 0
+
+.ribbon-helper-bottom
+  width: 0
+  height: 0
+  border-left: 20px solid transparent
+  border-right: 20px solid transparent
+  border-bottom: 20px solid black
+  position: absolute
+  right: -20px
+  bottom: 0
+
+.badge-banner
+  border: none !important
+  z-index: 10
+
+.banner-helper
+  content: ''
+  z-index: 5
+  position: absolute
+  top: 34px
+  right: 1px
+  margin: 0 auto
+  width: 0
+  height: 0
+  border-left: solid 10px transparent
+  border-right: solid 10px transparent
+  filter: brightness(75%)
+  transform: rotate(135deg)
+
+//ENDBadges
+
+.fit-height
+  height: fit-content
+
+.fit-width
+  width: fit-content
+
+.ynv-right
+  position: absolute !important
+  right: 8px !important
+
+
+.ynv-top-right
+  position: absolute !important
+  top: 8px !important
+  right: 8px !important
+
+.ynv-bottom-right
+  position: absolute !important
+  bottom: 8px !important
+  right: 8px !important
+
+// Rotating icon
+@keyframes rotating
+
+  from
+    transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    -ms-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -webkit-transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+    -o-transform: rotate(360deg)
+    -ms-transform: rotate(360deg)
+    -moz-transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+
+@-webkit-keyframes rotating
+
+  from
+    transform: rotate(0deg)
+    -webkit-transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+
+.rotating
+  -webkit-animation: rotating 1s linear infinite
+  -moz-animation: rotating 1s linear infinite
+  -ms-animation: rotating 1s linear infinite
+  -o-animation: rotating 1s linear infinite
+  animation: rotating 1s linear infinite
+// End rotating icon
+
+//hide default icon for input type=date & type=time
+input[type="date"]::-webkit-calendar-picker-indicator
+  display: none !important
+
+.redactor-dropdown a span
+  font-size: 14px
+
+.redactor-dropdown-fontfamily
+  width: auto !important
+  max-width: 400px
+//margin-left: 150px
+
+input[type="time"]::-webkit-calendar-picker-indicator
+  background: none
+  display: none
+
+.redactor-dropdown-not-close
+  cursor: pointer !important
+  color: rgba(0, 0, 0, 0.3) !important
+  background: #eee !important
+
+.redactor-dropdown-not-close.active
+  background: white !important
+  color: black !important
+  cursor: text !important
+  font-weight: bold !important
+
+.multi-checkboxes-wrapper .input-checkbox .v-icon,
+.multi-checkboxes-wrapper .v-input.v-input--checkbox .v-icon
+  color: rgba(194, 194, 194, 1)
+
+.multi-checkboxes-wrapper .input-checkbox .v-icon,
+.multi-checkboxes-wrapper .v-input.v-input--checkbox .v-icon
+  color: rgba(194, 194, 194, 1)
+
+.multi-checkboxes-wrapper .input-checkbox:hover .v-icon,
+.multi-checkboxes-wrapper .v-input.v-input--checkbox:hover .v-icon
+  color: rgba(0, 0, 0, 0.54)
+
+.multi-checkboxes-wrapper .v-input.v-input--checkbox.v-input--is-readonly .v-icon,
+.multi-checkboxes-wrapper .v-input.v-input--checkbox.v-input--is-readonly :hover .v-icon,
+.multi-checkboxes-wrapper .v-input.v-input--checkbox .v-icon.v-icon--disabled,
+.multi-checkboxes-wrapper .v-input.v-input--checkbox:hover .v-icon.v-icon--disabled,
+.multi-checkboxes-wrapper .input-checkbox.v-input--is-readonly .v-icon,
+.multi-checkboxes-wrapper .input-checkbox.v-input--is-readonly :hover .v-icon,
+.multi-checkboxes-wrapper .input-checkbox .v-icon.v-icon--disabled,
+.multi-checkboxes-wrapper .input-checkbox:hover .v-icon.v-icon--disabled
+  color: rgba(194, 194, 194, 1) !important
+
+.sku-status
+  vertical-align: middle
+  width: 15px
+  height: 15px
+  border-radius: 50%
+
+.sku-status.sku-status-0
+  background: #f44336 !important
+  caret-color: #f44336 !important
+
+.sku-status.sku-status-1
+  background: #4caf50 !important
+  caret-color: #4caf50 !important
+
+.sku-status.sku-status-2
+  background: #ff9800 !important
+  caret-color: #ff9800 !important
+
+.pseudo-redactor .v-input__control .v-input__slot
+  background-color: #f3f3f3
+  border: 1px solid rgba(0, 0, 0, 0.38)
+  border-radius: 3px
+  padding: 0 0 0 18px
+
+.pseudo-redactor textarea
+  padding-top: 12px
+
+.pseudo-redactor .v-input__slot:before,
+.pseudo-redactor .v-input__slot:after
+  border-width: 0 !important
+
+//v-text-field__details
+
+// v-treeview selectable checkbox styles
+.treeview-checkbox .v-treeview-node__checkbox.v-icon
+  color: rgba(194, 194, 194, 1)
+
+.treeview-checkbox .v-treeview-node__checkbox.v-icon
+  color: rgba(194, 194, 194, 1)
+
+.treeview-checkbox .v-treeview-node__checkbox.v-icon:hover
+  color: rgba(0, 0, 0, 0.54)
+
+.treeview-checkbox .v-treeview-node__checkbox.v-icon.v-icon--disabled,
+.treeview-checkbox .v-treeview-node__checkbox.v-icon.v-icon--disabled:hover
+  color: rgba(194, 194, 194, 1) !important
+
+.v-data-table-header.v-data-table-header-mobile .v-data-table-header-mobile__wrapper .v-data-table-header-mobile__select
+  min-width: 38px
+  margin-right: 22px
+
+/* theme for tippy tooltip used in the PMSCalendar */
+.tippy-box[data-theme~='tippy-vuetify']
+  background-color: rgba(97, 97, 97, 0.9)
+  color: #FFFFFF
+  border-radius: 4px
+  font-size: 14px
+  line-height: 22px
+  padding: 1px
+
+.ynv-app .ynv-card .core-card--action-slot .search-field-box .v-input__append-inner
+  position: absolute !important
+  top: 0
+  right: 0
+
+.v-data-table tr > td .v-input.v-input--switch .v-input--selection-controls__input,
+.v-data-table tr > th .v-input.v-input--switch .v-input--selection-controls__input
+  margin-right: 8px !important
+
+/** start - Circular background for showing name initial as an image **/
+.circular-initial
+  background-color: #f3f3f3
+  width: 50px
+  padding-top: 50px
+  border-radius: 50%
+  position: relative
+/** end - Circular background for showing name initial as an image **/
+
+/** start - To show triangle on each side of the div **/
+.triangle-left
+  margin-left: 15px
+  contain: initial
+  overflow: visible
+
+.triangle-left::before
+  position: absolute
+  content: ""
+  top: 25px
+  left: -15px
+  width: 15px
+  height: 30px
+  border-top: 15px solid transparent
+  border-bottom: 15px solid transparent
+  border-right: 15px solid #fff
+  shadow: 1px #0B0E12
+
+.triangle-right
+  margin-right: 15px
+  contain: initial
+  overflow: visible
+
+.triangle-right::before
+  position: absolute
+  content: ""
+  top: 25px
+  right: -15px
+  width: 15px
+  height: 30px
+  border-top: 15px solid transparent
+  border-bottom: 15px solid transparent
+  border-left: 15px solid #fff
+
+/** end - To show triangle on each side of the div **/
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item .v-text-field > .v-input__control > .v-input__slot:after, .theme--light.v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before, .theme--light.v-btn-toggle:not(.v-btn-toggle--group) .v-btn.v-btn
+  border: 1px solid #D4D9DE !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item button
+  border-radius: 0 !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item button:not(:last-child)
+  border-right: none
+
+.ynv-translation-tab
+  padding-left: 0
+  padding-right: 0
+
+/* Prevent double borders */
+
+/* Clear floats (clearfix hack) */
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item:after
+  content: ""
+  clear: both
+  display: table
+
+/* Add a background color on hover */
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item:first-child button
+  border-radius: 5px 0 0 5px !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item:last-child button
+  border-radius: 0 5px 5px 0 !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .ynv-btn-item:only-child button
+  border-radius: 5px !important
+
+.ynv-translation-tab .ynv-translation-btn-toggle .col.ynv-btn-item
+  flex-grow: 0 !important
+
+.search-field-box .is-mobile.search-results-datasets .v-menu__content
+  min-width: 69vw
+
+@media only screen and (max-width: 759px)
+  .ynv-card-edit .v-expansion-panel-header--active .v-expansion-panel-header__icon
+    top: 58px
+
+.search-field-box .search-results-datasets
+  position: relative
+
+.rotating-inner.v-icon .v-icon--svg
+  -webkit-animation: rotating 1s linear infinite
+  -moz-animation: rotating 1s linear infinite
+  -ms-animation: rotating 1s linear infinite
+  -o-animation: rotating 1s linear infinite
+  animation: rotating 1s linear infinite
+
+.v-icon .v-icon--svg svg
+  pointer-events: none

@@ -1,0 +1,53 @@
+@import '~vuetify/src/styles/styles.sass';
+
+$ynv-dark: #202328;
+$ynv-light: #E7EAEE;
+$primary: #06429A;
+
+$menu-navigation-delay: 0.6s;
+$menu-navigation-item-delay: 0.25s;
+
+$container-padding-x: 24px;
+$btn-border-radius: 3px;
+$btn-text-transform: capitalize;
+$card-elevation: 1;
+
+/** begin stepper **/
+$stepper-header-elevation: 0;
+$stepper-elevation: 0;
+$stepper-header-height: 82;
+$stepper-step-step-margin: 14px;
+$stepper-step-step-font-size: 16px;
+$stepper-label-small-font-weight: 500;
+$stepper-content-padding: 16px 25px;
+/** end stepper **/
+
+/* Data Tables */
+$data-table-text-color: #696969;
+$data-table-lang-border: #919191;
+$data-table-regular-header-height: 60px;
+$data-table-regular-row-font-size: map-deep-get($headings, 'subtitle-2', 'size') !default;
+//$data-table-regular-row-height: 200px;
+//$data-table-row-group-children-td-height: 150px;
+
+/* Data Tables */
+
+$overflow-input-slot-border-width: 0 !default;
+
+$material-light: (
+        'background': $ynv-light,
+);
+
+$material-dark: (
+        'navigation-drawer': $ynv-dark,
+);
+
+/* Navigation Drawer */
+$navigation-drawer-border-width: none !important;
+
+//$text-field-filled-full-width-outlined-slot-min-height: 38px !important;
+//$select-filled-full-width-outlined-slot-min-height: 38px !important;
+//$autocomplete-filled-full-width-outlined-slot-min-height: 38px !important;
+
+$text-field-filled-full-width-outlined-slot-min-height: 48px !important;
+$text-field-padding: 10px 0 8px !important;

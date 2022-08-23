@@ -1,28 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="layout v-application">
+        <CoreToolbar v-if="$auth.check()"/>
+
+<!--        <core-running-tracker-overlay v-if="$auth.check()"></core-running-tracker-overlay>-->
+
+        <div v-if="!$auth.ready()">
+            <loading :active="!$auth.ready()" :is-full-page="true"></loading>
+        </div>
+
+        <CoreFooter/>
+
+        <!--        <CoreSnackbar/>-->
+        <!--        <CoreConfirm ref="confirm"/>-->
+        <!--        <CoreMedia ref="media"/>-->
+    </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import {components} from '@Yanovis/app-components'
+import Loading from 'vue-loading-overlay'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const {CoreToolbar, CoreFooter} = components
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.layout {
+    background: #E7EAEE
 }
 </style>
