@@ -5,10 +5,16 @@
         <!--        <core-running-tracker-overlay v-if="$auth.check()"></core-running-tracker-overlay>-->
 
         <div v-if="!$auth.ready()">
-            <loading :active="!$auth.ready()" :is-full-page="true"></loading>
+            <Loading
+                :active="!$auth.ready()"
+                :is-full-page="true"
+            />
         </div>
 
-        <CoreDrawer :dynamic="conf"/>
+        <CoreDrawer
+            v-if="canPaintCoreDrawer"
+            :dynamic="conf"
+        />
 
         <CoreFooter/>
 
@@ -24,9 +30,18 @@ import {components} from '@Yanovis/app-components'
 import Loading from 'vue-loading-overlay'
 import {onMounted, ref} from 'vue'
 import {menu} from '@Yanovis/app-utils'
+import router from '@/router'
 
 const {CoreToolbar, CoreFooter, CoreDrawer} = components
-const conf = ref(menu.menu)
 
-onMounted(() => menu.menu$.subscribe(data => conf.value = data))
+const excludePaths = ['/', '/login', '/auth']
+const canPaintCoreDrawer = ref(!excludePaths.includes(router.currentRoute.path))
+const conf = ref(menu.menu)
+onMounted(() => {
+    menu.menu$.subscribe(data => conf.value = data)
+    router.beforeEach(({path}, from, next) => {
+        canPaintCoreDrawer.value = !excludePaths.includes(path)
+        next()
+    })
+})
 </script>
