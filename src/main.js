@@ -13,11 +13,6 @@ const vueLifecycles = singleSpaVue({
         i18n,
         vuetify,
         router,
-        data() {
-            return {
-                fullscreen: false,
-            };
-        },
         async mounted() {
             await this.$auth.fetch({})
         },

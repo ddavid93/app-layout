@@ -33,12 +33,12 @@ import {menu} from '@Yanovis/app-utils'
 import router from '@/router'
 
 const {CoreToolbar, CoreFooter, CoreDrawer} = components
-
+const menuClass = new menu.Menu()
 const excludePaths = ['/', '/login', '/auth', '/403']
 const canPaintCoreDrawer = ref(!excludePaths.includes(router.currentRoute.path))
-const conf = ref(menu.menu)
+const conf = ref(menuClass.state)
 onMounted(() => {
-    menu.menu$.subscribe(data => conf.value = data)
+    menuClass.state$.subscribe(data => conf.value = data)
     router.beforeEach(({path}, from, next) => {
         canPaintCoreDrawer.value = !excludePaths.includes(path)
         next()
