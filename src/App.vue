@@ -34,7 +34,7 @@ import router from '@/router'
 
 const {CoreToolbar, CoreFooter, CoreDrawer} = components
 
-const excludePaths = ['/', '/login', '/auth']
+const excludePaths = ['/', '/login', '/auth', '/403']
 const canPaintCoreDrawer = ref(!excludePaths.includes(router.currentRoute.path))
 const conf = ref(menu.menu)
 onMounted(() => {

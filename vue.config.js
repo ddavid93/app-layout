@@ -20,11 +20,13 @@ module.exports = defineConfig({
             'vue-axios',
             'vue',
             'vuetify',
+            'vee-validate',
             'vue-router',
             'single-spa',
             "rxjs",
             "rxjs/operators",
             "@Yanovis/app-utils",
+            "@Yanovis/app-yanovis",
             "@Yanovis/app-components"
         ]);
     },
