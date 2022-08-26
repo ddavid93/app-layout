@@ -29,16 +29,15 @@
 import {components} from '@Yanovis/app-components'
 import Loading from 'vue-loading-overlay'
 import {onMounted, ref} from 'vue'
-import {menu} from '@Yanovis/app-utils'
+import {Menu} from '@Yanovis/app-utils'
 import router from '@/router'
 
 const {CoreToolbar, CoreFooter, CoreDrawer} = components
-const menuClass = new menu.Menu()
 const excludePaths = ['/', '/login', '/auth', '/403']
 const canPaintCoreDrawer = ref(!excludePaths.includes(router.currentRoute.path))
-const conf = ref(menuClass.state)
+const conf = ref(Menu.state)
 onMounted(() => {
-    menuClass.state$.subscribe(data => conf.value = data)
+    Menu.state$.subscribe(data => conf.value = data)
     router.beforeEach(({path}, from, next) => {
         canPaintCoreDrawer.value = !excludePaths.includes(path)
         next()
