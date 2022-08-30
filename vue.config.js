@@ -17,6 +17,7 @@ module.exports = defineConfig({
     chainWebpack: config => {
         config.externals([
             'vue-i18n',
+            'axios',
             'vue-axios',
             'vue',
             'vuetify',

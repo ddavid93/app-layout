@@ -1,26 +1,25 @@
 <template>
-    <v-app v-if="$auth.ready()">
-        <CoreToolbar v-if="$auth.check()"/>
+    <v-app style="height: 90px">
 
-        <!--        <core-running-tracker-overlay v-if="$auth.check()"></core-running-tracker-overlay>-->
+        <div v-if="ready">
+            <CoreToolbar v-if="check"/>
+            <CoreRunningTrackerOverlay v-if="check"/>
+            <CoreDrawer
+                v-if="conf"
+                :dynamic="conf"
+            />
+            <CoreFooter/>
 
-        <div v-if="!$auth.ready()">
+            <!--        <CoreSnackbar/>-->
+            <!--        <CoreConfirm ref="confirm"/>-->
+            <!--        <CoreMedia ref="media"/>-->
+        </div>
+        <div v-if="!ready">
             <Loading
-                :active="!$auth.ready()"
+                :active="true"
                 :is-full-page="true"
             />
         </div>
-
-        <CoreDrawer
-            v-if="canPaintCoreDrawer"
-            :dynamic="conf"
-        />
-
-        <CoreFooter/>
-
-        <!--        <CoreSnackbar/>-->
-        <!--        <CoreConfirm ref="confirm"/>-->
-        <!--        <CoreMedia ref="media"/>-->
     </v-app>
 
 </template>
@@ -28,19 +27,23 @@
 <script setup>
 import {components} from '@Yanovis/app-components'
 import Loading from 'vue-loading-overlay'
-import {onMounted, ref} from 'vue'
+import Vue, {onMounted, ref} from 'vue'
 import {Menu} from '@Yanovis/app-utils'
-import router from '@/router'
 
-const {CoreToolbar, CoreFooter, CoreDrawer} = components
-const excludePaths = (val) => ['/', '/login', '/auth', '/403'].includes(val)
-const canPaintCoreDrawer = ref(!excludePaths(router.currentRoute.path))
+const auth = Vue.prototype.$auth
+const {CoreToolbar, CoreFooter, CoreDrawer, CoreRunningTrackerOverlay} = components
+
+const ready = ref(false)
+const check = ref(auth.check())
+
 const conf = ref(Menu.state)
 onMounted(() => {
+
     Menu.state$.subscribe(data => conf.value = data)
-    router.beforeEach(({path}, from, next) => {
-        canPaintCoreDrawer.value = !excludePaths(path)
-        next()
+
+    auth.user$.subscribe(() => {
+        check.value = auth.check()
+        ready.value = auth.ready()
     })
 })
 </script>
