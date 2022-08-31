@@ -5,9 +5,11 @@ import router from '../src/router'
 import App from './App.vue';
 import vuetify from '../src/plugins/vuetify'
 import axios from "axios";
+import {AuthService} from '@Yanovis/app-utils'
+import './reactivity'
+import {loadingRef, userRef} from "@/reactivity";
 
 Vue.config.productionTip = false;
-
 axios.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${Vue.prototype.$auth.getToken()}`
     return config;
@@ -19,6 +21,10 @@ const app = singleSpaVue({
         i18n,
         vuetify,
         router,
+        mounted() {
+            AuthService.loading$.subscribe((data) => loadingRef.value = !data)
+            AuthService.user$.subscribe((data) => userRef.value = data)
+        },
         render: h => h(App),
     },
 });
