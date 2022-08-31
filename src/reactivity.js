@@ -1,5 +1,5 @@
 import Vue, {reactive, ref} from "vue";
-import {AuthService} from '@Yanovis/app-utils'
+import {AuthService, Settings} from '@Yanovis/app-utils'
 
 export const userRef = ref(AuthService.user)
 export const loadingRef = ref(AuthService.loading)
@@ -15,3 +15,5 @@ Vue.prototype.$auth = reactive(
         ...AuthService
     }
 )
+
+Vue.prototype.$settings = reactive(Settings.state)

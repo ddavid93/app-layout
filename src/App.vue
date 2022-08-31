@@ -33,8 +33,5 @@ import {Menu} from '@Yanovis/app-utils'
 const {CoreToolbar, CoreFooter, CoreDrawer, CoreRunningTrackerOverlay} = components
 
 const conf = ref(Menu.state)
-onMounted(() => {
-
-    Menu.state$.subscribe(data => conf.value = data)
-})
+onMounted(() => Menu.state$.subscribe(data => conf.value = data))
 </script>
