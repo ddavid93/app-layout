@@ -1,19 +1,16 @@
 <template>
     <v-app style="height: 90px">
+        <CoreToolbar v-if="$auth.check()"/>
+        <CoreRunningTrackerOverlay v-if="$auth.check()"/>
+        <CoreDrawer
+            v-if="conf && $auth.check() && $route.path !== '/'"
+            :dynamic="conf"
+        />
+        <CoreFooter/>
 
-        <div v-if="$auth.ready">
-            <CoreToolbar v-if="$auth.check()"/>
-            <CoreRunningTrackerOverlay v-if="$auth.check()"/>
-            <CoreDrawer
-                v-if="conf && $auth.check() && $route.path !== '/'"
-                :dynamic="conf"
-            />
-            <CoreFooter/>
-
-            <!--        <CoreSnackbar/>-->
-            <!--        <CoreConfirm ref="confirm"/>-->
-            <!--        <CoreMedia ref="media"/>-->
-        </div>
+        <!--        <CoreSnackbar/>-->
+        <!--        <CoreConfirm ref="confirm"/>-->
+        <!--        <CoreMedia ref="media"/>-->
         <div v-if="!$auth.ready">
             <Loading
                 :active="true"
