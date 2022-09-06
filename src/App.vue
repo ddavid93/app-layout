@@ -12,7 +12,7 @@
         <CoreConfirm ref="confirm"/>
         <CoreHasChanged ref="hasChanged"/>
         <CoreMedia ref="media"/>
-        <CoreMediPreview ref="mediaPreview"/>
+        <CoreMediaPreview ref="mediaPreview"/>
 
         <div v-if="!$auth.ready">
             <Loading
@@ -38,7 +38,7 @@ const {
     CoreConfirm,
     CoreHasChanged,
     CoreMedia,
-    CoreMediPreview
+    CoreMediaPreview
 } = components
 const conf = ref(Menu.state)
 const confirm = ref()
