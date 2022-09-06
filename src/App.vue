@@ -9,8 +9,11 @@
         <CoreFooter/>
 
         <!--        <CoreSnackbar/>-->
-        <!--        <CoreConfirm ref="confirm"/>-->
-        <!--        <CoreMedia ref="media"/>-->
+        <CoreConfirm ref="confirm"/>
+        <CoreHasChanged ref="hasChanged"/>
+        <CoreMedia ref="media"/>
+        <CoreMediPreview ref="mediaPreview"/>
+
         <div v-if="!$auth.ready">
             <Loading
                 :active="true"
@@ -24,10 +27,29 @@
 <script setup>
 import {components} from '@Yanovis/app-components'
 import Loading from 'vue-loading-overlay'
-import {onMounted, ref} from 'vue'
+import Vue, {onMounted, ref} from 'vue'
 import {Menu} from '@Yanovis/app-utils'
 
-const {CoreToolbar, CoreFooter, CoreDrawer, CoreRunningTrackerOverlay} = components
+const {
+    CoreToolbar,
+    CoreFooter,
+    CoreDrawer,
+    CoreRunningTrackerOverlay,
+    CoreConfirm,
+    CoreHasChanged,
+    CoreMedia,
+    CoreMediPreview
+} = components
 const conf = ref(Menu.state)
-onMounted(() => Menu.state$.subscribe(data => conf.value = data))
+const confirm = ref()
+const hasChanged = ref()
+const media = ref()
+const mediaPreview = ref()
+onMounted(() => {
+    Menu.state$.subscribe(data => conf.value = data)
+    Vue.prototype.$confirm = confirm.value
+    Vue.prototype.$hasChanged = hasChanged.value
+    Vue.prototype.$media = media.value
+    Vue.prototype.$mediaPreview = mediaPreview.value
+})
 </script>
