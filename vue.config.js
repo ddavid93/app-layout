@@ -20,6 +20,7 @@ module.exports = defineConfig({
             'axios',
             'vue-axios',
             'vue',
+            'vuex',
             'vuetify',
             'vee-validate',
             'vue-router',

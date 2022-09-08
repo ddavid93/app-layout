@@ -8,7 +8,7 @@
         />
         <CoreFooter/>
 
-        <!--        <CoreSnackbar/>-->
+        <CoreSnackbar/>
         <CoreConfirm ref="confirm"/>
         <CoreHasChanged ref="hasChanged"/>
         <CoreMedia ref="media"/>
@@ -38,7 +38,8 @@ const {
     CoreConfirm,
     CoreHasChanged,
     CoreMedia,
-    CoreMediaPreview
+    CoreMediaPreview,
+    CoreSnackbar
 } = components
 const conf = ref(Menu.state)
 const confirm = ref()
