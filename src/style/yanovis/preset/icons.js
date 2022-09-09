@@ -1,9 +1,8 @@
+console.log(99999)
 import {components} from '@Yanovis/app-components'
-
-const {CoreSvgIcons} = components
-
 import * as ionicIcons from 'ionicons/icons/index.js'
 import * as ynvIcons from "@/icons";
+const {CoreSvgIcons} = components
 
 
 function buildSvgIcons(names) {
